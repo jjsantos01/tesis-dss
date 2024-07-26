@@ -1,0 +1,87 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}E:/Dropbox\Trabajo de Grado\Procesamiento de informacion/log/Tablas capítulo 1.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}24 Jun 2013, 16:17:56
+{txt}
+{com}.  
+.  keep if edad>=18
+{txt}(75470 observations deleted)
+
+{com}. 
+{txt}end of do-file
+
+{com}. tab etnia salud
+
+{txt}Pertenenci {c |}   autoevaluation of own health
+  a étnica {c |} Muy bueno      bueno       malo {c |}     Total
+{hline 11}{c +}{hline 33}{c +}{hline 10}
+No étnicos {c |}{res}    17,712     52,231     33,550 {txt}{c |}{res}   103,493 
+{txt}   Étnicos {c |}{res}     3,693     12,912      8,891 {txt}{c |}{res}    25,496 
+{txt}{hline 11}{c +}{hline 33}{c +}{hline 10}
+     Total {c |}{res}    21,405     65,143     42,441 {txt}{c |}{res}   128,989 
+
+
+{com}. tab etnia salud [iw=pon], row nofreq
+
+{txt}Pertenenci {c |}   autoevaluation of own health
+  a étnica {c |} Muy bueno      bueno       malo {c |}     Total
+{hline 11}{c +}{hline 33}{c +}{hline 10}
+No étnicos {c |}{res}     17.97      51.20      30.83 {txt}{c |}{res}    100.00 
+{txt}   Étnicos {c |}{res}     14.36      50.98      34.66 {txt}{c |}{res}    100.00 
+{txt}{hline 11}{c +}{hline 33}{c +}{hline 10}
+     Total {c |}{res}     17.47      51.17      31.36 {txt}{c |}{res}    100.00 
+
+
+{com}. tab etnia salud [iw=pon] if caribe==1 , row nofreq
+
+{txt}Pertenenci {c |}   autoevaluation of own health
+  a étnica {c |} Muy bueno      bueno       malo {c |}     Total
+{hline 11}{c +}{hline 33}{c +}{hline 10}
+No étnicos {c |}{res}     13.17      52.91      33.92 {txt}{c |}{res}    100.00 
+{txt}   Étnicos {c |}{res}     14.33      53.70      31.97 {txt}{c |}{res}    100.00 
+{txt}{hline 11}{c +}{hline 33}{c +}{hline 10}
+     Total {c |}{res}     13.45      53.10      33.45 {txt}{c |}{res}    100.00 
+
+
+{com}. tab ocupado
+
+     {txt}occupation last week {c |}      Freq.     Percent        Cum.
+{hline 26}{c +}{hline 35}
+                  working {c |}{res}     73,790       57.23       57.23
+{txt}   didn't work, has a job {c |}{res}      1,782        1.38       58.61
+{txt}         looking for work {c |}{res}      3,424        2.66       61.27
+{txt}                 studying {c |}{res}      6,069        4.71       65.98
+{txt}                housework {c |}{res}     35,158       27.27       93.25
+{txt}                  retired {c |}{res}      3,577        2.77       96.02
+{txt}            receive rents {c |}{res}        311        0.24       96.26
+{txt}permanently incapacitated {c |}{res}      2,454        1.90       98.16
+{txt}                    other {c |}{res}      2,295        1.78       99.94
+{txt}               don't know {c |}{res}         71        0.06      100.00
+{txt}{hline 26}{c +}{hline 35}
+                    Total {c |}{res}    128,931      100.00
+
+{com}. tab ocupacion
+
+  {txt}ocupacion {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}     53,417       41.41       41.41
+{txt}          1 {c |}{res}     75,572       58.59      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}    128,989      100.00
+
+{com}. tab etnia
+
+{txt}Pertenencia {c |}
+     étnica {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+ No étnicos {c |}{res}    103,493       80.23       80.23
+{txt}    Étnicos {c |}{res}     25,496       19.77      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}    128,989      100.00
+
+{com}. keep if edad>=18
+{txt}(0 observations deleted)
+
+{com}. exit, clear

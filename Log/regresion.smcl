@@ -1,0 +1,1187 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}E:/Dropbox\Trabajo de Grado\Procesamiento de informacion/log/regresion.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}28 Oct 2013, 23:52:36
+{txt}
+{com}. use "${c -(}B{c )-}regresion_caribe", clear
+{txt}
+{com}. 
+. global indep "edad sexo tamaño_hogar estado_civil etnia ocupacion educacion riqueza_2 riqueza_3 riqueza_4 riqueza_5 eps_cont eps_sub eps_esp obesidad bajopeso urbano"
+{txt}
+{com}. global indep2 "edad sexo tamaño_hogar etnia ocupacion educacion riqueza_2 riqueza_3 riqueza_4 riqueza_5 eps_cont eps_sub eps_esp obesidad bajopeso"
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. svy: mlogit salud ${c -(}indep{c )-}, nolog rrr
+{txt}(running mlogit on estimation sample)
+{res}
+{txt}Survey: Multinomial logistic regression
+
+{col 1}Number of strata{col 20}= {res}       60{txt}{col 49}Number of obs{col 68}= {res}    20315
+{txt}{col 1}Number of PSUs{col 20}= {res}      991{txt}{col 49}Population size{col 68}={res} 18047.214
+{txt}{col 49}Design df{col 68}= {res}      931
+{txt}{col 49}F({res}  34{txt},{res}    898{txt}){col 68}= {res}    44.76
+{txt}{col 49}Prob > F{col 68}= {res}   0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}  Linearized
+{col 1}       salud{col 14}{c |}        RRR{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}Muy_bueno    {txt}{c |}
+{space 8}edad {c |}{col 14}{res}{space 2} .9875732{col 26}{space 2} .0024545{col 37}{space 1}   -5.03{col 46}{space 3}0.000{col 54}{space 4} .9827679{col 67}{space 3}  .992402
+{txt}{space 8}sexo {c |}{col 14}{res}{space 2} 1.343975{col 26}{space 2} .0680649{col 37}{space 1}    5.84{col 46}{space 3}0.000{col 54}{space 4}  1.21682{col 67}{space 3} 1.484417
+{txt}tamaño_hogar {c |}{col 14}{res}{space 2} .9634119{col 26}{space 2} .0142487{col 37}{space 1}   -2.52{col 46}{space 3}0.012{col 54}{space 4} .9358504{col 67}{space 3}  .991785
+{txt}estado_civil {c |}{col 14}{res}{space 2} .9798714{col 26}{space 2} .0566532{col 37}{space 1}   -0.35{col 46}{space 3}0.725{col 54}{space 4} .8747644{col 67}{space 3} 1.097607
+{txt}{space 7}etnia {c |}{col 14}{res}{space 2} 1.129704{col 26}{space 2} .0820817{col 37}{space 1}    1.68{col 46}{space 3}0.094{col 54}{space 4} .9795754{col 67}{space 3} 1.302842
+{txt}{space 3}ocupacion {c |}{col 14}{res}{space 2} 1.227814{col 26}{space 2}  .071003{col 37}{space 1}    3.55{col 46}{space 3}0.000{col 54}{space 4} 1.096086{col 67}{space 3} 1.375373
+{txt}{space 3}educacion {c |}{col 14}{res}{space 2} 1.016588{col 26}{space 2} .0077098{col 37}{space 1}    2.17{col 46}{space 3}0.030{col 54}{space 4}  1.00157{col 67}{space 3} 1.031832
+{txt}{space 3}riqueza_2 {c |}{col 14}{res}{space 2} 1.155318{col 26}{space 2} .1143994{col 37}{space 1}    1.46{col 46}{space 3}0.145{col 54}{space 4} .9512746{col 67}{space 3} 1.403127
+{txt}{space 3}riqueza_3 {c |}{col 14}{res}{space 2} 1.440411{col 26}{space 2}  .171436{col 37}{space 1}    3.07{col 46}{space 3}0.002{col 54}{space 4} 1.140369{col 67}{space 3} 1.819396
+{txt}{space 3}riqueza_4 {c |}{col 14}{res}{space 2} 1.446966{col 26}{space 2} .1822622{col 37}{space 1}    2.93{col 46}{space 3}0.003{col 54}{space 4} 1.130056{col 67}{space 3} 1.852749
+{txt}{space 3}riqueza_5 {c |}{col 14}{res}{space 2} 1.938167{col 26}{space 2} .2712434{col 37}{space 1}    4.73{col 46}{space 3}0.000{col 54}{space 4} 1.472692{col 67}{space 3} 2.550766
+{txt}{space 4}eps_cont {c |}{col 14}{res}{space 2} 1.001512{col 26}{space 2} .0771561{col 37}{space 1}    0.02{col 46}{space 3}0.984{col 54}{space 4} .8609833{col 67}{space 3} 1.164978
+{txt}{space 5}eps_sub {c |}{col 14}{res}{space 2} .8720685{col 26}{space 2} .0652766{col 37}{space 1}   -1.83{col 46}{space 3}0.068{col 54}{space 4} .7529272{col 67}{space 3} 1.010062
+{txt}{space 5}eps_esp {c |}{col 14}{res}{space 2}  1.06751{col 26}{space 2} .1680184{col 37}{space 1}    0.42{col 46}{space 3}0.678{col 54}{space 4}  .783835{col 67}{space 3} 1.453849
+{txt}{space 4}obesidad {c |}{col 14}{res}{space 2}  .833566{col 26}{space 2} .0652031{col 37}{space 1}   -2.33{col 46}{space 3}0.020{col 54}{space 4} .7149419{col 67}{space 3} .9718723
+{txt}{space 4}bajopeso {c |}{col 14}{res}{space 2} .7123526{col 26}{space 2} .0981555{col 37}{space 1}   -2.46{col 46}{space 3}0.014{col 54}{space 4} .5435691{col 67}{space 3}  .933545
+{txt}{space 6}urbano {c |}{col 14}{res}{space 2} .9720916{col 26}{space 2} .1011753{col 37}{space 1}   -0.27{col 46}{space 3}0.786{col 54}{space 4} .7924991{col 67}{space 3} 1.192383
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .2708446{col 26}{space 2} .0434194{col 37}{space 1}   -8.15{col 46}{space 3}0.000{col 54}{space 4} .1977359{col 67}{space 3} .3709837
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}bueno       {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}malo         {txt}{c |}
+{space 8}edad {c |}{col 14}{res}{space 2} 1.033414{col 26}{space 2} .0018892{col 37}{space 1}   17.98{col 46}{space 3}0.000{col 54}{space 4} 1.029713{col 67}{space 3} 1.037129
+{txt}{space 8}sexo {c |}{col 14}{res}{space 2} .6974259{col 26}{space 2} .0313767{col 37}{space 1}   -8.01{col 46}{space 3}0.000{col 54}{space 4} .6384887{col 67}{space 3} .7618034
+{txt}tamaño_hogar {c |}{col 14}{res}{space 2} .9791117{col 26}{space 2} .0095181{col 37}{space 1}   -2.17{col 46}{space 3}0.030{col 54}{space 4} .9606092{col 67}{space 3} .9979705
+{txt}estado_civil {c |}{col 14}{res}{space 2} 1.044831{col 26}{space 2} .0471073{col 37}{space 1}    0.97{col 46}{space 3}0.331{col 54}{space 4}  .956354{col 67}{space 3} 1.141493
+{txt}{space 7}etnia {c |}{col 14}{res}{space 2} .9026729{col 26}{space 2} .0490274{col 37}{space 1}   -1.89{col 46}{space 3}0.060{col 54}{space 4} .8114063{col 67}{space 3} 1.004205
+{txt}{space 3}ocupacion {c |}{col 14}{res}{space 2} .9264222{col 26}{space 2} .0424971{col 37}{space 1}   -1.67{col 46}{space 3}0.096{col 54}{space 4} .8466649{col 67}{space 3} 1.013693
+{txt}{space 3}educacion {c |}{col 14}{res}{space 2} .9692547{col 26}{space 2} .0058191{col 37}{space 1}   -5.20{col 46}{space 3}0.000{col 54}{space 4} .9579017{col 67}{space 3} .9807423
+{txt}{space 3}riqueza_2 {c |}{col 14}{res}{space 2} .8694345{col 26}{space 2}  .065005{col 37}{space 1}   -1.87{col 46}{space 3}0.062{col 54}{space 4} .7507792{col 67}{space 3} 1.006842
+{txt}{space 3}riqueza_3 {c |}{col 14}{res}{space 2} .8445611{col 26}{space 2} .0756779{col 37}{space 1}   -1.89{col 46}{space 3}0.060{col 54}{space 4} .7083679{col 67}{space 3} 1.006939
+{txt}{space 3}riqueza_4 {c |}{col 14}{res}{space 2} .7117225{col 26}{space 2} .0669776{col 37}{space 1}   -3.61{col 46}{space 3}0.000{col 54}{space 4} .5917019{col 67}{space 3}  .856088
+{txt}{space 3}riqueza_5 {c |}{col 14}{res}{space 2} .5496068{col 26}{space 2} .0639205{col 37}{space 1}   -5.15{col 46}{space 3}0.000{col 54}{space 4} .4374481{col 67}{space 3} .6905222
+{txt}{space 4}eps_cont {c |}{col 14}{res}{space 2} .7353159{col 26}{space 2} .0487659{col 37}{space 1}   -4.64{col 46}{space 3}0.000{col 54}{space 4} .6455785{col 67}{space 3}  .837527
+{txt}{space 5}eps_sub {c |}{col 14}{res}{space 2} .9192982{col 26}{space 2} .0496263{col 37}{space 1}   -1.56{col 46}{space 3}0.119{col 54}{space 4} .8268873{col 67}{space 3} 1.022037
+{txt}{space 5}eps_esp {c |}{col 14}{res}{space 2} .7265174{col 26}{space 2}   .09501{col 37}{space 1}   -2.44{col 46}{space 3}0.015{col 54}{space 4} .5620637{col 67}{space 3} .9390885
+{txt}{space 4}obesidad {c |}{col 14}{res}{space 2}  1.15627{col 26}{space 2} .0591178{col 37}{space 1}    2.84{col 46}{space 3}0.005{col 54}{space 4} 1.045881{col 67}{space 3}  1.27831
+{txt}{space 4}bajopeso {c |}{col 14}{res}{space 2} 1.195689{col 26}{space 2} .1125484{col 37}{space 1}    1.90{col 46}{space 3}0.058{col 54}{space 4} .9940118{col 67}{space 3} 1.438284
+{txt}{space 6}urbano {c |}{col 14}{res}{space 2} 1.026136{col 26}{space 2} .0743165{col 37}{space 1}    0.36{col 46}{space 3}0.722{col 54}{space 4} .8901791{col 67}{space 3} 1.182857
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .3582169{col 26}{space 2} .0424246{col 37}{space 1}   -8.67{col 46}{space 3}0.000{col 54}{space 4} .2839257{col 67}{space 3} .4519469
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+
+{com}. do "C:\Users\JUAN\AppData\Local\Temp\STD01000000.tmp"
+{txt}
+{com}. set more off
+{txt}
+{com}. quietly:eststo modelo1: svy: mlogit salud ${c -(}indep{c )-}, nolog rrr
+{txt}
+{com}. 
+. ** Exportando tabla con resultados
+. 
+. esttab modelo1 using "${c -(}T{c )-}resultados_regresion.csv",  replace cells(`"b(fmt(3) label("Coef.")  ) p(fmt(3) label("p-valor")) & _star "')  starlevels(** 0.05) drop("o.*" ) unstack  plain ///
+> mlabels("Modelo Región Caribe", span) eqlabels("Muy Bueno" "Malo") eform
+{res}{txt}(note: file E:/Dropbox\Trabajo de Grado\Procesamiento de informacion/Tablas/resultados_regresion.csv not found)
+(output written to {browse  `"E:/Dropbox\Trabajo de Grado\Procesamiento de informacion/Tablas/resultados_regresion.csv"'})
+
+{com}. stcmd "${c -(}T{c )-}resultados_regresion.csv" "${c -(}T{c )-}resultados_regresion.xlsx" /y 
+{txt}
+{com}. erase "${c -(}T{c )-}resultados_regresion.csv"
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\JUAN\AppData\Local\Temp\STD01000000.tmp"
+{txt}
+{com}. quietly:eststo modelo1: svy: mlogit salud ${c -(}indep{c )-}, nolog rrr
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. ereturn list
+
+{txt}scalars:
+               e(rank) =  {res}36
+               {txt}e(k_eq) =  {res}3
+               {txt}e(df_r) =  {res}931
+              {txt}e(N_psu) =  {res}991
+           {txt}e(N_strata) =  {res}60
+              {txt}e(N_pop) =  {res}18047.21412720531
+                  {txt}e(N) =  {res}20315
+             {txt}e(stages) =  {res}1
+          {txt}e(k_eq_base) =  {res}2
+         {txt}e(k_eq_model) =  {res}3
+              {txt}e(k_out) =  {res}3
+            {txt}e(baseout) =  {res}2
+           {txt}e(ibaseout) =  {res}2
+                 {txt}e(rc) =  {res}0
+          {txt}e(converged) =  {res}1
+               {txt}e(k_dv) =  {res}1
+                  {txt}e(k) =  {res}36
+                 {txt}e(ic) =  {res}4
+                  {txt}e(p) =  {res}5.3984653317e-168
+                  {txt}e(F) =  {res}44.76014796125487
+               {txt}e(df_m) =  {res}34
+             {txt}e(census) =  {res}0
+          {txt}e(singleton) =  {res}0
+      {txt}e(N_strata_omit) =  {res}0
+
+{txt}macros:
+    e(_estimates_name) : "{res}modelo1{txt}"
+                e(cmd) : "{res}mlogit{txt}"
+            e(cmdline) : "{res}svy : mlogit salud edad sexo tamaño_hogar estado_civil etnia ocupacion educacion {txt}.."
+             e(prefix) : "{res}svy{txt}"
+            e(cmdname) : "{res}mlogit{txt}"
+            e(command) : "{res}mlogit salud edad sexo tamaño_hogar estado_civil etnia ocupacion educacion riquez{txt}.."
+          e(estat_cmd) : "{res}svy_estat{txt}"
+                e(vce) : "{res}linearized{txt}"
+            e(vcetype) : "{res}Linearized{txt}"
+              e(title) : "{res}Survey: Multinomial logistic regression{txt}"
+               e(wexp) : "{res}= pon{txt}"
+              e(wtype) : "{res}pweight{txt}"
+               e(wvar) : "{res}pon{txt}"
+         e(singleunit) : "{res}missing{txt}"
+                e(su1) : "{res}hv001{txt}"
+            e(strata1) : "{res}shestrdi{txt}"
+         e(properties) : "{res}b V{txt}"
+       e(marginsnotok) : "{res}stdp stddp SCores{txt}"
+            e(predict) : "{res}mlogit_p{txt}"
+            e(eqnames) : "{res}Muy_bueno bueno malo{txt}"
+            e(baselab) : "{res}bueno{txt}"
+                e(opt) : "{res}moptimize{txt}"
+               e(user) : "{res}mopt__mlogit_d2(){txt}"
+          e(ml_method) : "{res}d2{txt}"
+          e(technique) : "{res}nr{txt}"
+              e(which) : "{res}max{txt}"
+             e(depvar) : "{res}salud{txt}"
+
+matrices:
+                  e(b) : {res} 1 x 54
+                  {txt}e(V) : {res} 54 x 54
+       {txt}e(V_modelbased) : {res} 54 x 54
+              {txt}e(V_srs) : {res} 54 x 54
+  {txt}e(_N_strata_certain) : {res} 1 x 1
+   {txt}e(_N_strata_single) : {res} 1 x 1
+          {txt}e(_N_strata) : {res} 1 x 1
+                {txt}e(out) : {res} 1 x 3
+               {txt}e(ilog) : {res} 1 x 20
+           {txt}e(gradient) : {res} 1 x 36
+
+{txt}functions:
+             e(sample)   
+
+{com}. h esttab
+
+. do "C:\Users\JUAN\AppData\Local\Temp\STD01000000.tmp"
+{txt}
+{com}. esttab modelo1 using "${c -(}T{c )-}resultados_regresion.csv",  replace cells(`"b(fmt(3) label("Coef.")  ) p(fmt(3) label("p-valor")) & _star c(fmt(3))"')  starlevels(** 0.05) drop("o.*" ) unstack  plain ///
+> mlabels("Modelo Región Caribe", span) eqlabels("Muy Bueno" "Malo") eform
+{res}{txt}(note: file E:/Dropbox\Trabajo de Grado\Procesamiento de informacion/Tablas/resultados_regresion.csv not found)
+(output written to {browse  `"E:/Dropbox\Trabajo de Grado\Procesamiento de informacion/Tablas/resultados_regresion.csv"'})
+
+{com}. stcmd "${c -(}T{c )-}resultados_regresion.csv" "${c -(}T{c )-}resultados_regresion.xlsx" /y 
+{txt}
+{com}. erase "${c -(}T{c )-}resultados_regresion.csv"
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\JUAN\AppData\Local\Temp\STD01000000.tmp"
+{txt}
+{com}. esttab modelo1 using "${c -(}T{c )-}resultados_regresion.csv",  replace cells(`"b(fmt(3) label("Coef.")  ) p(fmt(3) label("p-valor")) & _star c(fmt(3))"')  starlevels(** 0.05) drop("o.*" ) unstack  plain ///
+> mlabels("Modelo Región Caribe", span) eqlabels("Muy Bueno" "Malo") eform
+{res}{txt}(note: file E:/Dropbox\Trabajo de Grado\Procesamiento de informacion/Tablas/resultados_regresion.csv not found)
+(output written to {browse  `"E:/Dropbox\Trabajo de Grado\Procesamiento de informacion/Tablas/resultados_regresion.csv"'})
+
+{com}. stcmd "${c -(}T{c )-}resultados_regresion.csv" "${c -(}T{c )-}resultados_regresion.xlsx" /y 
+{txt}
+{com}. erase "${c -(}T{c )-}resultados_regresion.csv"
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\JUAN\AppData\Local\Temp\STD01000000.tmp"
+{txt}
+{com}. esttab modelo1 using "${c -(}T{c )-}resultados_regresion.csv",  replace cells(`"b(fmt(3) label("Coef.")  ) p(fmt(3) label("p-valor")) & _star ci(fmt(3))"')  starlevels(** 0.05) drop("o.*" ) unstack  plain ///
+> mlabels("Modelo Región Caribe", span) eqlabels("Muy Bueno" "Malo") eform
+{res}{txt}(note: file E:/Dropbox\Trabajo de Grado\Procesamiento de informacion/Tablas/resultados_regresion.csv not found)
+(output written to {browse  `"E:/Dropbox\Trabajo de Grado\Procesamiento de informacion/Tablas/resultados_regresion.csv"'})
+
+{com}. stcmd "${c -(}T{c )-}resultados_regresion.csv" "${c -(}T{c )-}resultados_regresion.xlsx" /y 
+{txt}
+{com}. erase "${c -(}T{c )-}resultados_regresion.csv"
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\JUAN\AppData\Local\Temp\STD01000000.tmp"
+{txt}
+{com}. set more off
+{txt}
+{com}. use "${c -(}B{c )-}regresion_colombia", clear
+{txt}
+{com}. 
+. global indep "edad sexo tamaño_hogar estado_civil etnia ocupacion educacion riqueza_2 riqueza_3 riqueza_4 riqueza_5 eps_cont eps_sub eps_esp obesidad bajopeso urbano"
+{txt}
+{com}. global indep2 "edad sexo tamaño_hogar etnia ocupacion educacion riqueza_2 riqueza_3 riqueza_4 riqueza_5 eps_cont eps_sub eps_esp obesidad bajopeso"
+{txt}
+{com}. 
+. foreach x in atlantico bolivar cesar cordoba guajira magdalena sucre san_andres{c -(}
+{txt}  2{com}. local a=substr("`x'",1,3)
+{txt}  3{com}. eststo modelo`a': mlogit salud ${c -(}indep{c )-} [pw=pon] if `x'==1, nolog rrr
+{txt}  4{com}. 
+. if "`a'"=="atl"{c -(}
+{txt}  5{com}. esttab modelo`a' using "${c -(}T{c )-}reg_deptos.csv",  replace cells(`"b(fmt(3) label("Coef.")) & _star"')  starlevels(* 0.10 ** 0.05 *** 0.01) drop("o.*" ) unstack  plain ///
+> mlabels("Modelo `a'", span) eqlabels("Muy Bueno" "Malo") eform
+{txt}  6{com}. {c )-}
+{txt}  7{com}. else {c -(}
+{txt}  8{com}. esttab modelo`a' using "${c -(}T{c )-}reg_deptos.csv",  append cells(`"b(fmt(3) label("Coef.")) & _star "')  starlevels(* 0.10 ** 0.05 *** 0.01) drop("o.*" ) unstack  plain ///
+> mlabels("Modelo `a'", span) eqlabels("Muy Bueno" "Malo") eform
+{txt}  9{com}. {c )-}
+{txt} 10{com}. * 
+. {c )-}
+{res}
+{txt}Multinomial logistic regression{col 51}Number of obs{col 67}= {res}      3102
+{txt}{col 51}Wald chi2({res}34{txt}){col 67}= {res}    320.06
+{txt}{col 51}Prob > chi2{col 67}= {res}    0.0000
+{txt}Log pseudolikelihood = {res}-3572.3521{txt}{col 51}Pseudo R2{col 67}= {res}    0.0656
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}       salud{col 14}{c |}        RRR{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}Muy_bueno    {txt}{c |}
+{space 8}edad {c |}{col 14}{res}{space 2} .9882153{col 26}{space 2} .0055664{col 37}{space 1}   -2.10{col 46}{space 3}0.035{col 54}{space 4} .9773654{col 67}{space 3} .9991857
+{txt}{space 8}sexo {c |}{col 14}{res}{space 2} 1.466967{col 26}{space 2} .1791587{col 37}{space 1}    3.14{col 46}{space 3}0.002{col 54}{space 4} 1.154687{col 67}{space 3} 1.863702
+{txt}tamaño_hogar {c |}{col 14}{res}{space 2} .9264362{col 26}{space 2}  .026576{col 37}{space 1}   -2.66{col 46}{space 3}0.008{col 54}{space 4} .8757855{col 67}{space 3} .9800164
+{txt}estado_civil {c |}{col 14}{res}{space 2} 1.144284{col 26}{space 2} .1479618{col 37}{space 1}    1.04{col 46}{space 3}0.297{col 54}{space 4} .8881145{col 67}{space 3} 1.474343
+{txt}{space 7}etnia {c |}{col 14}{res}{space 2} 1.114402{col 26}{space 2} .1527327{col 37}{space 1}    0.79{col 46}{space 3}0.429{col 54}{space 4} .8518866{col 67}{space 3} 1.457814
+{txt}{space 3}ocupacion {c |}{col 14}{res}{space 2} 1.365762{col 26}{space 2} .1736726{col 37}{space 1}    2.45{col 46}{space 3}0.014{col 54}{space 4} 1.064473{col 67}{space 3} 1.752327
+{txt}{space 3}educacion {c |}{col 14}{res}{space 2} 1.021765{col 26}{space 2} .0190185{col 37}{space 1}    1.16{col 46}{space 3}0.247{col 54}{space 4} .9851607{col 67}{space 3} 1.059729
+{txt}{space 3}riqueza_2 {c |}{col 14}{res}{space 2} .8767955{col 26}{space 2} .2568161{col 37}{space 1}   -0.45{col 46}{space 3}0.654{col 54}{space 4} .4938315{col 67}{space 3} 1.556746
+{txt}{space 3}riqueza_3 {c |}{col 14}{res}{space 2}  1.21647{col 26}{space 2} .3713738{col 37}{space 1}    0.64{col 46}{space 3}0.521{col 54}{space 4} .6687127{col 67}{space 3} 2.212906
+{txt}{space 3}riqueza_4 {c |}{col 14}{res}{space 2} 1.173717{col 26}{space 2} .3681892{col 37}{space 1}    0.51{col 46}{space 3}0.610{col 54}{space 4} .6346666{col 67}{space 3} 2.170607
+{txt}{space 3}riqueza_5 {c |}{col 14}{res}{space 2} 1.570751{col 26}{space 2} .5149148{col 37}{space 1}    1.38{col 46}{space 3}0.168{col 54}{space 4} .8261738{col 67}{space 3} 2.986369
+{txt}{space 4}eps_cont {c |}{col 14}{res}{space 2} 1.025583{col 26}{space 2}  .171367{col 37}{space 1}    0.15{col 46}{space 3}0.880{col 54}{space 4} .7391652{col 67}{space 3} 1.422984
+{txt}{space 5}eps_sub {c |}{col 14}{res}{space 2} .9296098{col 26}{space 2} .1496458{col 37}{space 1}   -0.45{col 46}{space 3}0.650{col 54}{space 4} .6780735{col 67}{space 3} 1.274455
+{txt}{space 5}eps_esp {c |}{col 14}{res}{space 2} .9036011{col 26}{space 2} .3307447{col 37}{space 1}   -0.28{col 46}{space 3}0.782{col 54}{space 4} .4409729{col 67}{space 3} 1.851576
+{txt}{space 4}obesidad {c |}{col 14}{res}{space 2} .6290819{col 26}{space 2} .1064254{col 37}{space 1}   -2.74{col 46}{space 3}0.006{col 54}{space 4} .4515486{col 67}{space 3} .8764152
+{txt}{space 4}bajopeso {c |}{col 14}{res}{space 2} .9881765{col 26}{space 2} .3012698{col 37}{space 1}   -0.04{col 46}{space 3}0.969{col 54}{space 4} .5436568{col 67}{space 3} 1.796156
+{txt}{space 6}urbano {c |}{col 14}{res}{space 2} .9045276{col 26}{space 2} .2888826{col 37}{space 1}   -0.31{col 46}{space 3}0.753{col 54}{space 4} .4836934{col 67}{space 3} 1.691506
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}  .282593{col 26}{space 2} .1319067{col 37}{space 1}   -2.71{col 46}{space 3}0.007{col 54}{space 4} .1131993{col 67}{space 3} .7054708
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}bueno       {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}malo         {txt}{c |}
+{space 8}edad {c |}{col 14}{res}{space 2} 1.034411{col 26}{space 2}  .004311{col 37}{space 1}    8.12{col 46}{space 3}0.000{col 54}{space 4} 1.025996{col 67}{space 3} 1.042895
+{txt}{space 8}sexo {c |}{col 14}{res}{space 2} .8047614{col 26}{space 2} .0886263{col 37}{space 1}   -1.97{col 46}{space 3}0.049{col 54}{space 4} .6485248{col 67}{space 3} .9986372
+{txt}tamaño_hogar {c |}{col 14}{res}{space 2} .9361953{col 26}{space 2} .0201926{col 37}{space 1}   -3.06{col 46}{space 3}0.002{col 54}{space 4} .8974434{col 67}{space 3} .9766206
+{txt}estado_civil {c |}{col 14}{res}{space 2} 1.054955{col 26}{space 2} .1097029{col 37}{space 1}    0.51{col 46}{space 3}0.607{col 54}{space 4} .8604368{col 67}{space 3} 1.293448
+{txt}{space 7}etnia {c |}{col 14}{res}{space 2} .8825568{col 26}{space 2} .1032694{col 37}{space 1}   -1.07{col 46}{space 3}0.286{col 54}{space 4} .7016851{col 67}{space 3} 1.110051
+{txt}{space 3}ocupacion {c |}{col 14}{res}{space 2} .7455332{col 26}{space 2} .0793583{col 37}{space 1}   -2.76{col 46}{space 3}0.006{col 54}{space 4} .6051469{col 67}{space 3} .9184872
+{txt}{space 3}educacion {c |}{col 14}{res}{space 2} .9532833{col 26}{space 2} .0133567{col 37}{space 1}   -3.41{col 46}{space 3}0.001{col 54}{space 4} .9274608{col 67}{space 3} .9798247
+{txt}{space 3}riqueza_2 {c |}{col 14}{res}{space 2}  1.07727{col 26}{space 2} .2343017{col 37}{space 1}    0.34{col 46}{space 3}0.732{col 54}{space 4} .7033833{col 67}{space 3} 1.649899
+{txt}{space 3}riqueza_3 {c |}{col 14}{res}{space 2} .8156989{col 26}{space 2} .1856704{col 37}{space 1}   -0.89{col 46}{space 3}0.371{col 54}{space 4} .5221295{col 67}{space 3} 1.274329
+{txt}{space 3}riqueza_4 {c |}{col 14}{res}{space 2} .8690399{col 26}{space 2}  .201813{col 37}{space 1}   -0.60{col 46}{space 3}0.546{col 54}{space 4} .5512762{col 67}{space 3} 1.369967
+{txt}{space 3}riqueza_5 {c |}{col 14}{res}{space 2} .8270115{col 26}{space 2}  .208666{col 37}{space 1}   -0.75{col 46}{space 3}0.452{col 54}{space 4} .5043617{col 67}{space 3} 1.356067
+{txt}{space 4}eps_cont {c |}{col 14}{res}{space 2} .8394185{col 26}{space 2} .1222302{col 37}{space 1}   -1.20{col 46}{space 3}0.229{col 54}{space 4} .6310047{col 67}{space 3} 1.116669
+{txt}{space 5}eps_sub {c |}{col 14}{res}{space 2} 1.049838{col 26}{space 2} .1396904{col 37}{space 1}    0.37{col 46}{space 3}0.715{col 54}{space 4} .8088398{col 67}{space 3} 1.362644
+{txt}{space 5}eps_esp {c |}{col 14}{res}{space 2} .7955682{col 26}{space 2} .2409254{col 37}{space 1}   -0.76{col 46}{space 3}0.450{col 54}{space 4} .4394448{col 67}{space 3} 1.440292
+{txt}{space 4}obesidad {c |}{col 14}{res}{space 2} 1.256432{col 26}{space 2} .1421734{col 37}{space 1}    2.02{col 46}{space 3}0.044{col 54}{space 4} 1.006514{col 67}{space 3} 1.568404
+{txt}{space 4}bajopeso {c |}{col 14}{res}{space 2} 2.035454{col 26}{space 2} .4261461{col 37}{space 1}    3.39{col 46}{space 3}0.001{col 54}{space 4} 1.350368{col 67}{space 3} 3.068105
+{txt}{space 6}urbano {c |}{col 14}{res}{space 2} 1.306424{col 26}{space 2} .3442117{col 37}{space 1}    1.01{col 46}{space 3}0.310{col 54}{space 4}  .779494{col 67}{space 3} 2.189553
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .2682882{col 26}{space 2} .0941106{col 37}{space 1}   -3.75{col 46}{space 3}0.000{col 54}{space 4} .1349011{col 67}{space 3} .5335654
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(note: file E:/Dropbox\Trabajo de Grado\Procesamiento de informacion/Tablas/reg_deptos.csv not found)
+(output written to {browse  `"E:/Dropbox\Trabajo de Grado\Procesamiento de informacion/Tablas/reg_deptos.csv"'})
+{res}
+{txt}Multinomial logistic regression{col 51}Number of obs{col 67}= {res}      2536
+{txt}{col 51}Wald chi2({res}34{txt}){col 67}= {res}    262.89
+{txt}{col 51}Prob > chi2{col 67}= {res}    0.0000
+{txt}Log pseudolikelihood = {res} -3522.281{txt}{col 51}Pseudo R2{col 67}= {res}    0.0605
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}       salud{col 14}{c |}        RRR{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}Muy_bueno    {txt}{c |}
+{space 8}edad {c |}{col 14}{res}{space 2} .9938578{col 26}{space 2} .0057591{col 37}{space 1}   -1.06{col 46}{space 3}0.288{col 54}{space 4} .9826341{col 67}{space 3}  1.00521
+{txt}{space 8}sexo {c |}{col 14}{res}{space 2} 1.413958{col 26}{space 2} .1909025{col 37}{space 1}    2.57{col 46}{space 3}0.010{col 54}{space 4} 1.085209{col 67}{space 3} 1.842297
+{txt}tamaño_hogar {c |}{col 14}{res}{space 2} .9856068{col 26}{space 2} .0279075{col 37}{space 1}   -0.51{col 46}{space 3}0.609{col 54}{space 4} .9323993{col 67}{space 3} 1.041851
+{txt}estado_civil {c |}{col 14}{res}{space 2} .9470511{col 26}{space 2} .1263122{col 37}{space 1}   -0.41{col 46}{space 3}0.683{col 54}{space 4} .7291974{col 67}{space 3} 1.229991
+{txt}{space 7}etnia {c |}{col 14}{res}{space 2} 1.284073{col 26}{space 2} .1649611{col 37}{space 1}    1.95{col 46}{space 3}0.052{col 54}{space 4} .9982475{col 67}{space 3} 1.651737
+{txt}{space 3}ocupacion {c |}{col 14}{res}{space 2} 1.176566{col 26}{space 2} .1645772{col 37}{space 1}    1.16{col 46}{space 3}0.245{col 54}{space 4} .8944396{col 67}{space 3} 1.547682
+{txt}{space 3}educacion {c |}{col 14}{res}{space 2} 1.025544{col 26}{space 2} .0184299{col 37}{space 1}    1.40{col 46}{space 3}0.160{col 54}{space 4} .9900512{col 67}{space 3}  1.06231
+{txt}{space 3}riqueza_2 {c |}{col 14}{res}{space 2} 1.081265{col 26}{space 2}  .224664{col 37}{space 1}    0.38{col 46}{space 3}0.707{col 54}{space 4} .7195661{col 67}{space 3} 1.624778
+{txt}{space 3}riqueza_3 {c |}{col 14}{res}{space 2} 1.120912{col 26}{space 2} .2578461{col 37}{space 1}    0.50{col 46}{space 3}0.620{col 54}{space 4} .7141143{col 67}{space 3} 1.759444
+{txt}{space 3}riqueza_4 {c |}{col 14}{res}{space 2} 1.208311{col 26}{space 2} .2692833{col 37}{space 1}    0.85{col 46}{space 3}0.396{col 54}{space 4} .7806933{col 67}{space 3} 1.870151
+{txt}{space 3}riqueza_5 {c |}{col 14}{res}{space 2} 1.694756{col 26}{space 2} .4201329{col 37}{space 1}    2.13{col 46}{space 3}0.033{col 54}{space 4}  1.04254{col 67}{space 3} 2.754999
+{txt}{space 4}eps_cont {c |}{col 14}{res}{space 2} .9984662{col 26}{space 2} .1986722{col 37}{space 1}   -0.01{col 46}{space 3}0.994{col 54}{space 4} .6760261{col 67}{space 3} 1.474699
+{txt}{space 5}eps_sub {c |}{col 14}{res}{space 2}  1.01619{col 26}{space 2} .1823299{col 37}{space 1}    0.09{col 46}{space 3}0.929{col 54}{space 4} .7149048{col 67}{space 3} 1.444448
+{txt}{space 5}eps_esp {c |}{col 14}{res}{space 2} 1.181172{col 26}{space 2} .4057444{col 37}{space 1}    0.48{col 46}{space 3}0.628{col 54}{space 4} .6024445{col 67}{space 3} 2.315845
+{txt}{space 4}obesidad {c |}{col 14}{res}{space 2}  .835055{col 26}{space 2} .1565403{col 37}{space 1}   -0.96{col 46}{space 3}0.336{col 54}{space 4}  .578293{col 67}{space 3} 1.205819
+{txt}{space 4}bajopeso {c |}{col 14}{res}{space 2}  .414183{col 26}{space 2} .1453866{col 37}{space 1}   -2.51{col 46}{space 3}0.012{col 54}{space 4} .2081629{col 67}{space 3} .8241024
+{txt}{space 6}urbano {c |}{col 14}{res}{space 2} .9361491{col 26}{space 2} .2051021{col 37}{space 1}   -0.30{col 46}{space 3}0.763{col 54}{space 4} .6093324{col 67}{space 3} 1.438255
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}  .204369{col 26}{space 2} .0799888{col 37}{space 1}   -4.06{col 46}{space 3}0.000{col 54}{space 4} .0948986{col 67}{space 3} .4401193
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}bueno       {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}malo         {txt}{c |}
+{space 8}edad {c |}{col 14}{res}{space 2} 1.036644{col 26}{space 2} .0046329{col 37}{space 1}    8.05{col 46}{space 3}0.000{col 54}{space 4} 1.027603{col 67}{space 3} 1.045764
+{txt}{space 8}sexo {c |}{col 14}{res}{space 2} .6445033{col 26}{space 2} .0731245{col 37}{space 1}   -3.87{col 46}{space 3}0.000{col 54}{space 4} .5159991{col 67}{space 3} .8050101
+{txt}tamaño_hogar {c |}{col 14}{res}{space 2} .9833779{col 26}{space 2} .0199973{col 37}{space 1}   -0.82{col 46}{space 3}0.410{col 54}{space 4} .9449547{col 67}{space 3} 1.023364
+{txt}estado_civil {c |}{col 14}{res}{space 2} 1.159955{col 26}{space 2} .1236575{col 37}{space 1}    1.39{col 46}{space 3}0.164{col 54}{space 4}  .941236{col 67}{space 3} 1.429499
+{txt}{space 7}etnia {c |}{col 14}{res}{space 2}  1.00322{col 26}{space 2} .1057019{col 37}{space 1}    0.03{col 46}{space 3}0.976{col 54}{space 4} .8160395{col 67}{space 3} 1.233334
+{txt}{space 3}ocupacion {c |}{col 14}{res}{space 2} .9914983{col 26}{space 2} .1083775{col 37}{space 1}   -0.08{col 46}{space 3}0.938{col 54}{space 4} .8002945{col 67}{space 3} 1.228384
+{txt}{space 3}educacion {c |}{col 14}{res}{space 2} .9804835{col 26}{space 2}  .014216{col 37}{space 1}   -1.36{col 46}{space 3}0.174{col 54}{space 4} .9530128{col 67}{space 3} 1.008746
+{txt}{space 3}riqueza_2 {c |}{col 14}{res}{space 2}  .811383{col 26}{space 2} .1203232{col 37}{space 1}   -1.41{col 46}{space 3}0.159{col 54}{space 4} .6067333{col 67}{space 3}  1.08506
+{txt}{space 3}riqueza_3 {c |}{col 14}{res}{space 2} .8063988{col 26}{space 2} .1342003{col 37}{space 1}   -1.29{col 46}{space 3}0.196{col 54}{space 4} .5819606{col 67}{space 3} 1.117394
+{txt}{space 3}riqueza_4 {c |}{col 14}{res}{space 2} .5941277{col 26}{space 2} .1070122{col 37}{space 1}   -2.89{col 46}{space 3}0.004{col 54}{space 4} .4174115{col 67}{space 3} .8456589
+{txt}{space 3}riqueza_5 {c |}{col 14}{res}{space 2} .3685231{col 26}{space 2} .0849708{col 37}{space 1}   -4.33{col 46}{space 3}0.000{col 54}{space 4}  .234532{col 67}{space 3} .5790649
+{txt}{space 4}eps_cont {c |}{col 14}{res}{space 2} .7156833{col 26}{space 2} .1194496{col 37}{space 1}   -2.00{col 46}{space 3}0.045{col 54}{space 4} .5160037{col 67}{space 3} .9926334
+{txt}{space 5}eps_sub {c |}{col 14}{res}{space 2}  .751951{col 26}{space 2} .1078363{col 37}{space 1}   -1.99{col 46}{space 3}0.047{col 54}{space 4} .5677012{col 67}{space 3} .9959998
+{txt}{space 5}eps_esp {c |}{col 14}{res}{space 2} .6408507{col 26}{space 2} .1978098{col 37}{space 1}   -1.44{col 46}{space 3}0.149{col 54}{space 4} .3499602{col 67}{space 3} 1.173532
+{txt}{space 4}obesidad {c |}{col 14}{res}{space 2} 1.237069{col 26}{space 2} .1587096{col 37}{space 1}    1.66{col 46}{space 3}0.097{col 54}{space 4} .9620307{col 67}{space 3} 1.590738
+{txt}{space 4}bajopeso {c |}{col 14}{res}{space 2} .9138666{col 26}{space 2} .2060313{col 37}{space 1}   -0.40{col 46}{space 3}0.690{col 54}{space 4} .5874615{col 67}{space 3} 1.421629
+{txt}{space 6}urbano {c |}{col 14}{res}{space 2} 1.030301{col 26}{space 2} .1572721{col 37}{space 1}    0.20{col 46}{space 3}0.845{col 54}{space 4} .7638906{col 67}{space 3} 1.389624
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .3359474{col 26}{space 2} .1024118{col 37}{space 1}   -3.58{col 46}{space 3}0.000{col 54}{space 4} .1848362{col 67}{space 3} .6105982
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(output written to {browse  `"E:/Dropbox\Trabajo de Grado\Procesamiento de informacion/Tablas/reg_deptos.csv"'})
+{res}
+{txt}Multinomial logistic regression{col 51}Number of obs{col 67}= {res}      2119
+{txt}{col 51}Wald chi2({res}34{txt}){col 67}= {res}    204.63
+{txt}{col 51}Prob > chi2{col 67}= {res}    0.0000
+{txt}Log pseudolikelihood = {res}-1779.4573{txt}{col 51}Pseudo R2{col 67}= {res}    0.0558
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}       salud{col 14}{c |}        RRR{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}Muy_bueno    {txt}{c |}
+{space 8}edad {c |}{col 14}{res}{space 2} .9836499{col 26}{space 2} .0059918{col 37}{space 1}   -2.71{col 46}{space 3}0.007{col 54}{space 4}  .971976{col 67}{space 3} .9954641
+{txt}{space 8}sexo {c |}{col 14}{res}{space 2} 1.231157{col 26}{space 2} .1689646{col 37}{space 1}    1.52{col 46}{space 3}0.130{col 54}{space 4} .9407936{col 67}{space 3} 1.611138
+{txt}tamaño_hogar {c |}{col 14}{res}{space 2}  .934262{col 26}{space 2} .0244363{col 37}{space 1}   -2.60{col 46}{space 3}0.009{col 54}{space 4} .8875745{col 67}{space 3} .9834052
+{txt}estado_civil {c |}{col 14}{res}{space 2} .9442112{col 26}{space 2} .1233632{col 37}{space 1}   -0.44{col 46}{space 3}0.660{col 54}{space 4} .7308998{col 67}{space 3} 1.219777
+{txt}{space 7}etnia {c |}{col 14}{res}{space 2} 1.326595{col 26}{space 2} .2310952{col 37}{space 1}    1.62{col 46}{space 3}0.105{col 54}{space 4} .9428828{col 67}{space 3} 1.866463
+{txt}{space 3}ocupacion {c |}{col 14}{res}{space 2} 1.361991{col 26}{space 2}  .191736{col 37}{space 1}    2.19{col 46}{space 3}0.028{col 54}{space 4} 1.033582{col 67}{space 3} 1.794746
+{txt}{space 3}educacion {c |}{col 14}{res}{space 2} 1.018059{col 26}{space 2} .0172884{col 37}{space 1}    1.05{col 46}{space 3}0.292{col 54}{space 4} .9847319{col 67}{space 3} 1.052514
+{txt}{space 3}riqueza_2 {c |}{col 14}{res}{space 2} .8690796{col 26}{space 2} .1794479{col 37}{space 1}   -0.68{col 46}{space 3}0.497{col 54}{space 4} .5798333{col 67}{space 3} 1.302615
+{txt}{space 3}riqueza_3 {c |}{col 14}{res}{space 2} .8055756{col 26}{space 2} .1983924{col 37}{space 1}   -0.88{col 46}{space 3}0.380{col 54}{space 4} .4971386{col 67}{space 3} 1.305375
+{txt}{space 3}riqueza_4 {c |}{col 14}{res}{space 2} .7415266{col 26}{space 2}  .211009{col 37}{space 1}   -1.05{col 46}{space 3}0.293{col 54}{space 4} .4245302{col 67}{space 3} 1.295224
+{txt}{space 3}riqueza_5 {c |}{col 14}{res}{space 2} 1.269278{col 26}{space 2} .4050517{col 37}{space 1}    0.75{col 46}{space 3}0.455{col 54}{space 4} .6790813{col 67}{space 3} 2.372423
+{txt}{space 4}eps_cont {c |}{col 14}{res}{space 2} .9843425{col 26}{space 2} .1789534{col 37}{space 1}   -0.09{col 46}{space 3}0.931{col 54}{space 4} .6892834{col 67}{space 3} 1.405706
+{txt}{space 5}eps_sub {c |}{col 14}{res}{space 2} .8697767{col 26}{space 2} .1365661{col 37}{space 1}   -0.89{col 46}{space 3}0.374{col 54}{space 4} .6393788{col 67}{space 3} 1.183198
+{txt}{space 5}eps_esp {c |}{col 14}{res}{space 2} 1.093853{col 26}{space 2} .3519552{col 37}{space 1}    0.28{col 46}{space 3}0.780{col 54}{space 4} .5822085{col 67}{space 3}  2.05513
+{txt}{space 4}obesidad {c |}{col 14}{res}{space 2} .8658205{col 26}{space 2} .1504484{col 37}{space 1}   -0.83{col 46}{space 3}0.407{col 54}{space 4} .6159136{col 67}{space 3} 1.217127
+{txt}{space 4}bajopeso {c |}{col 14}{res}{space 2} .5010104{col 26}{space 2} .1646368{col 37}{space 1}   -2.10{col 46}{space 3}0.035{col 54}{space 4} .2631078{col 67}{space 3} .9540249
+{txt}{space 6}urbano {c |}{col 14}{res}{space 2} 1.221486{col 26}{space 2} .2407044{col 37}{space 1}    1.02{col 46}{space 3}0.310{col 54}{space 4}  .830141{col 67}{space 3} 1.797319
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .7560237{col 26}{space 2}  .252562{col 37}{space 1}   -0.84{col 46}{space 3}0.402{col 54}{space 4} .3928056{col 67}{space 3} 1.455101
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}bueno       {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}malo         {txt}{c |}
+{space 8}edad {c |}{col 14}{res}{space 2}  1.03606{col 26}{space 2} .0049738{col 37}{space 1}    7.38{col 46}{space 3}0.000{col 54}{space 4} 1.026357{col 67}{space 3} 1.045854
+{txt}{space 8}sexo {c |}{col 14}{res}{space 2} .7789764{col 26}{space 2} .0994431{col 37}{space 1}   -1.96{col 46}{space 3}0.050{col 54}{space 4} .6065422{col 67}{space 3} 1.000432
+{txt}tamaño_hogar {c |}{col 14}{res}{space 2} .9730045{col 26}{space 2} .0220032{col 37}{space 1}   -1.21{col 46}{space 3}0.226{col 54}{space 4} .9308208{col 67}{space 3}   1.0171
+{txt}estado_civil {c |}{col 14}{res}{space 2} 1.006462{col 26}{space 2} .1121022{col 37}{space 1}    0.06{col 46}{space 3}0.954{col 54}{space 4} .8090743{col 67}{space 3} 1.252006
+{txt}{space 7}etnia {c |}{col 14}{res}{space 2} 1.068098{col 26}{space 2}  .164985{col 37}{space 1}    0.43{col 46}{space 3}0.670{col 54}{space 4} .7890954{col 67}{space 3}  1.44575
+{txt}{space 3}ocupacion {c |}{col 14}{res}{space 2}  1.04905{col 26}{space 2} .1306101{col 37}{space 1}    0.38{col 46}{space 3}0.701{col 54}{space 4}    .8219{col 67}{space 3} 1.338978
+{txt}{space 3}educacion {c |}{col 14}{res}{space 2} .9804732{col 26}{space 2} .0142404{col 37}{space 1}   -1.36{col 46}{space 3}0.175{col 54}{space 4} .9529561{col 67}{space 3} 1.008785
+{txt}{space 3}riqueza_2 {c |}{col 14}{res}{space 2} .8908259{col 26}{space 2} .1525398{col 37}{space 1}   -0.68{col 46}{space 3}0.500{col 54}{space 4} .6368514{col 67}{space 3} 1.246085
+{txt}{space 3}riqueza_3 {c |}{col 14}{res}{space 2}  .735869{col 26}{space 2} .1541701{col 37}{space 1}   -1.46{col 46}{space 3}0.143{col 54}{space 4} .4880534{col 67}{space 3} 1.109516
+{txt}{space 3}riqueza_4 {c |}{col 14}{res}{space 2} .7302728{col 26}{space 2} .1798695{col 37}{space 1}   -1.28{col 46}{space 3}0.202{col 54}{space 4} .4506406{col 67}{space 3} 1.183423
+{txt}{space 3}riqueza_5 {c |}{col 14}{res}{space 2} .6047813{col 26}{space 2} .1867626{col 37}{space 1}   -1.63{col 46}{space 3}0.103{col 54}{space 4} .3301708{col 67}{space 3} 1.107792
+{txt}{space 4}eps_cont {c |}{col 14}{res}{space 2} .8346832{col 26}{space 2} .1387665{col 37}{space 1}   -1.09{col 46}{space 3}0.277{col 54}{space 4}  .602572{col 67}{space 3} 1.156204
+{txt}{space 5}eps_sub {c |}{col 14}{res}{space 2} 1.096436{col 26}{space 2} .1511973{col 37}{space 1}    0.67{col 46}{space 3}0.504{col 54}{space 4} .8367647{col 67}{space 3}  1.43669
+{txt}{space 5}eps_esp {c |}{col 14}{res}{space 2} .3745027{col 26}{space 2} .1486858{col 37}{space 1}   -2.47{col 46}{space 3}0.013{col 54}{space 4} .1719924{col 67}{space 3} .8154562
+{txt}{space 4}obesidad {c |}{col 14}{res}{space 2} 1.250096{col 26}{space 2} .1710033{col 37}{space 1}    1.63{col 46}{space 3}0.103{col 54}{space 4} .9561054{col 67}{space 3} 1.634485
+{txt}{space 4}bajopeso {c |}{col 14}{res}{space 2} .8404201{col 26}{space 2} .2232832{col 37}{space 1}   -0.65{col 46}{space 3}0.513{col 54}{space 4} .4992853{col 67}{space 3} 1.414634
+{txt}{space 6}urbano {c |}{col 14}{res}{space 2} 1.002995{col 26}{space 2} .1676322{col 37}{space 1}    0.02{col 46}{space 3}0.986{col 54}{space 4} .7228302{col 67}{space 3} 1.391751
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .3356405{col 26}{space 2} .1029376{col 37}{space 1}   -3.56{col 46}{space 3}0.000{col 54}{space 4} .1840007{col 67}{space 3} .6122507
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(output written to {browse  `"E:/Dropbox\Trabajo de Grado\Procesamiento de informacion/Tablas/reg_deptos.csv"'})
+{res}
+{txt}Multinomial logistic regression{col 51}Number of obs{col 67}= {res}      2951
+{txt}{col 51}Wald chi2({res}34{txt}){col 67}= {res}    264.57
+{txt}{col 51}Prob > chi2{col 67}= {res}    0.0000
+{txt}Log pseudolikelihood = {res}-2846.1029{txt}{col 51}Pseudo R2{col 67}= {res}    0.0554
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}       salud{col 14}{c |}        RRR{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}Muy_bueno    {txt}{c |}
+{space 8}edad {c |}{col 14}{res}{space 2}  .987594{col 26}{space 2} .0065778{col 37}{space 1}   -1.87{col 46}{space 3}0.061{col 54}{space 4} .9747856{col 67}{space 3} 1.000571
+{txt}{space 8}sexo {c |}{col 14}{res}{space 2}  1.38064{col 26}{space 2}  .215525{col 37}{space 1}    2.07{col 46}{space 3}0.039{col 54}{space 4} 1.016725{col 67}{space 3}  1.87481
+{txt}tamaño_hogar {c |}{col 14}{res}{space 2} .9597184{col 26}{space 2} .0317959{col 37}{space 1}   -1.24{col 46}{space 3}0.215{col 54}{space 4} .8993798{col 67}{space 3} 1.024105
+{txt}estado_civil {c |}{col 14}{res}{space 2} .9680338{col 26}{space 2} .1503831{col 37}{space 1}   -0.21{col 46}{space 3}0.834{col 54}{space 4} .7139327{col 67}{space 3} 1.312574
+{txt}{space 7}etnia {c |}{col 14}{res}{space 2} 1.263458{col 26}{space 2} .2053869{col 37}{space 1}    1.44{col 46}{space 3}0.150{col 54}{space 4} .9187348{col 67}{space 3} 1.737527
+{txt}{space 3}ocupacion {c |}{col 14}{res}{space 2} 1.031662{col 26}{space 2} .1654561{col 37}{space 1}    0.19{col 46}{space 3}0.846{col 54}{space 4} .7533955{col 67}{space 3} 1.412705
+{txt}{space 3}educacion {c |}{col 14}{res}{space 2} 1.017179{col 26}{space 2} .0199402{col 37}{space 1}    0.87{col 46}{space 3}0.385{col 54}{space 4} .9788382{col 67}{space 3} 1.057022
+{txt}{space 3}riqueza_2 {c |}{col 14}{res}{space 2} 1.027268{col 26}{space 2} .2339685{col 37}{space 1}    0.12{col 46}{space 3}0.906{col 54}{space 4} .6573791{col 67}{space 3} 1.605284
+{txt}{space 3}riqueza_3 {c |}{col 14}{res}{space 2} 1.481482{col 26}{space 2} .4710692{col 37}{space 1}    1.24{col 46}{space 3}0.216{col 54}{space 4} .7943988{col 67}{space 3} 2.762831
+{txt}{space 3}riqueza_4 {c |}{col 14}{res}{space 2} 3.384344{col 26}{space 2} 1.113847{col 37}{space 1}    3.70{col 46}{space 3}0.000{col 54}{space 4} 1.775535{col 67}{space 3} 6.450894
+{txt}{space 3}riqueza_5 {c |}{col 14}{res}{space 2} 2.952929{col 26}{space 2} .9663944{col 37}{space 1}    3.31{col 46}{space 3}0.001{col 54}{space 4} 1.554832{col 67}{space 3}  5.60819
+{txt}{space 4}eps_cont {c |}{col 14}{res}{space 2} .7713768{col 26}{space 2} .1919011{col 37}{space 1}   -1.04{col 46}{space 3}0.297{col 54}{space 4} .4737039{col 67}{space 3} 1.256106
+{txt}{space 5}eps_sub {c |}{col 14}{res}{space 2} .7969449{col 26}{space 2} .1548545{col 37}{space 1}   -1.17{col 46}{space 3}0.243{col 54}{space 4} .5445417{col 67}{space 3} 1.166341
+{txt}{space 5}eps_esp {c |}{col 14}{res}{space 2} 1.106116{col 26}{space 2} .4501964{col 37}{space 1}    0.25{col 46}{space 3}0.804{col 54}{space 4} .4981456{col 67}{space 3} 2.456096
+{txt}{space 4}obesidad {c |}{col 14}{res}{space 2} .9135868{col 26}{space 2} .1954331{col 37}{space 1}   -0.42{col 46}{space 3}0.673{col 54}{space 4} .6007062{col 67}{space 3} 1.389433
+{txt}{space 4}bajopeso {c |}{col 14}{res}{space 2} .4541624{col 26}{space 2} .2095923{col 37}{space 1}   -1.71{col 46}{space 3}0.087{col 54}{space 4} .1838181{col 67}{space 3} 1.122106
+{txt}{space 6}urbano {c |}{col 14}{res}{space 2} 1.033859{col 26}{space 2} .2244607{col 37}{space 1}    0.15{col 46}{space 3}0.878{col 54}{space 4} .6755499{col 67}{space 3} 1.582214
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .2008626{col 26}{space 2} .0792942{col 37}{space 1}   -4.07{col 46}{space 3}0.000{col 54}{space 4} .0926556{col 67}{space 3} .4354382
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}bueno       {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}malo         {txt}{c |}
+{space 8}edad {c |}{col 14}{res}{space 2} 1.030283{col 26}{space 2} .0039602{col 37}{space 1}    7.76{col 46}{space 3}0.000{col 54}{space 4}  1.02255{col 67}{space 3} 1.038074
+{txt}{space 8}sexo {c |}{col 14}{res}{space 2} .8056793{col 26}{space 2} .0852075{col 37}{space 1}   -2.04{col 46}{space 3}0.041{col 54}{space 4} .6548478{col 67}{space 3}  .991252
+{txt}tamaño_hogar {c |}{col 14}{res}{space 2}   .99118{col 26}{space 2} .0189827{col 37}{space 1}   -0.46{col 46}{space 3}0.644{col 54}{space 4} .9546642{col 67}{space 3} 1.029093
+{txt}estado_civil {c |}{col 14}{res}{space 2}  .995015{col 26}{space 2} .0950443{col 37}{space 1}   -0.05{col 46}{space 3}0.958{col 54}{space 4} .8251302{col 67}{space 3} 1.199877
+{txt}{space 7}etnia {c |}{col 14}{res}{space 2} .8427567{col 26}{space 2} .0859037{col 37}{space 1}   -1.68{col 46}{space 3}0.093{col 54}{space 4} .6901408{col 67}{space 3} 1.029122
+{txt}{space 3}ocupacion {c |}{col 14}{res}{space 2} .7611502{col 26}{space 2} .0803187{col 37}{space 1}   -2.59{col 46}{space 3}0.010{col 54}{space 4} .6189409{col 67}{space 3} .9360339
+{txt}{space 3}educacion {c |}{col 14}{res}{space 2} .9704622{col 26}{space 2} .0119387{col 37}{space 1}   -2.44{col 46}{space 3}0.015{col 54}{space 4} .9473426{col 67}{space 3} .9941461
+{txt}{space 3}riqueza_2 {c |}{col 14}{res}{space 2} .9248376{col 26}{space 2} .1187263{col 37}{space 1}   -0.61{col 46}{space 3}0.543{col 54}{space 4}  .719105{col 67}{space 3} 1.189429
+{txt}{space 3}riqueza_3 {c |}{col 14}{res}{space 2} 1.152944{col 26}{space 2} .2276172{col 37}{space 1}    0.72{col 46}{space 3}0.471{col 54}{space 4} .7830002{col 67}{space 3} 1.697675
+{txt}{space 3}riqueza_4 {c |}{col 14}{res}{space 2}  .874724{col 26}{space 2} .2345487{col 37}{space 1}   -0.50{col 46}{space 3}0.618{col 54}{space 4} .5171656{col 67}{space 3} 1.479491
+{txt}{space 3}riqueza_5 {c |}{col 14}{res}{space 2} .5401659{col 26}{space 2} .1543267{col 37}{space 1}   -2.16{col 46}{space 3}0.031{col 54}{space 4}  .308558{col 67}{space 3} .9456219
+{txt}{space 4}eps_cont {c |}{col 14}{res}{space 2} .5932624{col 26}{space 2} .0962402{col 37}{space 1}   -3.22{col 46}{space 3}0.001{col 54}{space 4} .4316814{col 67}{space 3} .8153243
+{txt}{space 5}eps_sub {c |}{col 14}{res}{space 2} .8918995{col 26}{space 2} .1019724{col 37}{space 1}   -1.00{col 46}{space 3}0.317{col 54}{space 4} .7128473{col 67}{space 3} 1.115926
+{txt}{space 5}eps_esp {c |}{col 14}{res}{space 2} .8650662{col 26}{space 2} .2393192{col 37}{space 1}   -0.52{col 46}{space 3}0.600{col 54}{space 4} .5029975{col 67}{space 3}  1.48776
+{txt}{space 4}obesidad {c |}{col 14}{res}{space 2} 1.011407{col 26}{space 2} .1204758{col 37}{space 1}    0.10{col 46}{space 3}0.924{col 54}{space 4} .8008173{col 67}{space 3} 1.277376
+{txt}{space 4}bajopeso {c |}{col 14}{res}{space 2} 1.196661{col 26}{space 2} .2653914{col 37}{space 1}    0.81{col 46}{space 3}0.418{col 54}{space 4} .7748088{col 67}{space 3} 1.848195
+{txt}{space 6}urbano {c |}{col 14}{res}{space 2} 1.053651{col 26}{space 2} .1220233{col 37}{space 1}    0.45{col 46}{space 3}0.652{col 54}{space 4} .8396909{col 67}{space 3} 1.322131
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .3860262{col 26}{space 2} .0962852{col 37}{space 1}   -3.82{col 46}{space 3}0.000{col 54}{space 4} .2367579{col 67}{space 3} .6294034
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(output written to {browse  `"E:/Dropbox\Trabajo de Grado\Procesamiento de informacion/Tablas/reg_deptos.csv"'})
+{res}
+{txt}Multinomial logistic regression{col 51}Number of obs{col 67}= {res}      1949
+{txt}{col 51}Wald chi2({res}34{txt}){col 67}= {res}    220.83
+{txt}{col 51}Prob > chi2{col 67}= {res}    0.0000
+{txt}Log pseudolikelihood = {res}-875.05232{txt}{col 51}Pseudo R2{col 67}= {res}    0.0666
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}       salud{col 14}{c |}        RRR{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}Muy_bueno    {txt}{c |}
+{space 8}edad {c |}{col 14}{res}{space 2} .9823064{col 26}{space 2} .0061859{col 37}{space 1}   -2.83{col 46}{space 3}0.005{col 54}{space 4} .9702568{col 67}{space 3} .9945057
+{txt}{space 8}sexo {c |}{col 14}{res}{space 2}  1.29278{col 26}{space 2} .1810393{col 37}{space 1}    1.83{col 46}{space 3}0.067{col 54}{space 4} .9824789{col 67}{space 3} 1.701084
+{txt}tamaño_hogar {c |}{col 14}{res}{space 2} 1.028286{col 26}{space 2} .0265749{col 37}{space 1}    1.08{col 46}{space 3}0.280{col 54}{space 4} .9774977{col 67}{space 3} 1.081714
+{txt}estado_civil {c |}{col 14}{res}{space 2} .9329909{col 26}{space 2} .1313245{col 37}{space 1}   -0.49{col 46}{space 3}0.622{col 54}{space 4} .7080522{col 67}{space 3}  1.22939
+{txt}{space 7}etnia {c |}{col 14}{res}{space 2} .8544037{col 26}{space 2} .1162218{col 37}{space 1}   -1.16{col 46}{space 3}0.247{col 54}{space 4} .6544507{col 67}{space 3} 1.115448
+{txt}{space 3}ocupacion {c |}{col 14}{res}{space 2} 1.416762{col 26}{space 2} .2072237{col 37}{space 1}    2.38{col 46}{space 3}0.017{col 54}{space 4} 1.063641{col 67}{space 3} 1.887115
+{txt}{space 3}educacion {c |}{col 14}{res}{space 2} 1.015195{col 26}{space 2} .0175714{col 37}{space 1}    0.87{col 46}{space 3}0.384{col 54}{space 4} .9813337{col 67}{space 3} 1.050225
+{txt}{space 3}riqueza_2 {c |}{col 14}{res}{space 2} .7952944{col 26}{space 2}   .16044{col 37}{space 1}   -1.14{col 46}{space 3}0.256{col 54}{space 4} .5355615{col 67}{space 3} 1.180991
+{txt}{space 3}riqueza_3 {c |}{col 14}{res}{space 2} .9251838{col 26}{space 2} .2159246{col 37}{space 1}   -0.33{col 46}{space 3}0.739{col 54}{space 4} .5855578{col 67}{space 3} 1.461794
+{txt}{space 3}riqueza_4 {c |}{col 14}{res}{space 2} 1.269927{col 26}{space 2} .3533359{col 37}{space 1}    0.86{col 46}{space 3}0.390{col 54}{space 4} .7361155{col 67}{space 3} 2.190843
+{txt}{space 3}riqueza_5 {c |}{col 14}{res}{space 2} .8412483{col 26}{space 2} .3012489{col 37}{space 1}   -0.48{col 46}{space 3}0.629{col 54}{space 4}  .416976{col 67}{space 3} 1.697217
+{txt}{space 4}eps_cont {c |}{col 14}{res}{space 2} .9914754{col 26}{space 2} .2303404{col 37}{space 1}   -0.04{col 46}{space 3}0.971{col 54}{space 4} .6288253{col 67}{space 3} 1.563269
+{txt}{space 5}eps_sub {c |}{col 14}{res}{space 2} .8053115{col 26}{space 2} .1441662{col 37}{space 1}   -1.21{col 46}{space 3}0.226{col 54}{space 4} .5669992{col 67}{space 3} 1.143788
+{txt}{space 5}eps_esp {c |}{col 14}{res}{space 2} 4.309195{col 26}{space 2} 1.972438{col 37}{space 1}    3.19{col 46}{space 3}0.001{col 54}{space 4} 1.757024{col 67}{space 3} 10.56853
+{txt}{space 4}obesidad {c |}{col 14}{res}{space 2} .9314528{col 26}{space 2}  .165463{col 37}{space 1}   -0.40{col 46}{space 3}0.689{col 54}{space 4} .6575877{col 67}{space 3} 1.319375
+{txt}{space 4}bajopeso {c |}{col 14}{res}{space 2} 1.144458{col 26}{space 2} .3606863{col 37}{space 1}    0.43{col 46}{space 3}0.669{col 54}{space 4} .6170722{col 67}{space 3} 2.122578
+{txt}{space 6}urbano {c |}{col 14}{res}{space 2}  1.32019{col 26}{space 2} .2477517{col 37}{space 1}    1.48{col 46}{space 3}0.139{col 54}{space 4} .9138961{col 67}{space 3} 1.907111
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .4269156{col 26}{space 2} .1467278{col 37}{space 1}   -2.48{col 46}{space 3}0.013{col 54}{space 4} .2176658{col 67}{space 3} .8373247
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}bueno       {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}malo         {txt}{c |}
+{space 8}edad {c |}{col 14}{res}{space 2} 1.035415{col 26}{space 2} .0053697{col 37}{space 1}    6.71{col 46}{space 3}0.000{col 54}{space 4} 1.024944{col 67}{space 3} 1.045993
+{txt}{space 8}sexo {c |}{col 14}{res}{space 2} .5079259{col 26}{space 2} .0687847{col 37}{space 1}   -5.00{col 46}{space 3}0.000{col 54}{space 4} .3895187{col 67}{space 3} .6623269
+{txt}tamaño_hogar {c |}{col 14}{res}{space 2} .9962045{col 26}{space 2} .0225915{col 37}{space 1}   -0.17{col 46}{space 3}0.867{col 54}{space 4} .9528955{col 67}{space 3} 1.041482
+{txt}estado_civil {c |}{col 14}{res}{space 2} 1.084251{col 26}{space 2} .1333382{col 37}{space 1}    0.66{col 46}{space 3}0.511{col 54}{space 4} .8520233{col 67}{space 3} 1.379775
+{txt}{space 7}etnia {c |}{col 14}{res}{space 2}  .962836{col 26}{space 2} .1223952{col 37}{space 1}   -0.30{col 46}{space 3}0.766{col 54}{space 4} .7504954{col 67}{space 3} 1.235255
+{txt}{space 3}ocupacion {c |}{col 14}{res}{space 2} 1.087827{col 26}{space 2} .1430737{col 37}{space 1}    0.64{col 46}{space 3}0.522{col 54}{space 4} .8406357{col 67}{space 3} 1.407706
+{txt}{space 3}educacion {c |}{col 14}{res}{space 2} .9594173{col 26}{space 2} .0149018{col 37}{space 1}   -2.67{col 46}{space 3}0.008{col 54}{space 4} .9306504{col 67}{space 3} .9890733
+{txt}{space 3}riqueza_2 {c |}{col 14}{res}{space 2} 1.314145{col 26}{space 2} .2375015{col 37}{space 1}    1.51{col 46}{space 3}0.131{col 54}{space 4} .9221643{col 67}{space 3} 1.872744
+{txt}{space 3}riqueza_3 {c |}{col 14}{res}{space 2} 1.401596{col 26}{space 2} .3050142{col 37}{space 1}    1.55{col 46}{space 3}0.121{col 54}{space 4} .9149238{col 67}{space 3} 2.147141
+{txt}{space 3}riqueza_4 {c |}{col 14}{res}{space 2} 1.422696{col 26}{space 2} .3852032{col 37}{space 1}    1.30{col 46}{space 3}0.193{col 54}{space 4} .8368439{col 67}{space 3} 2.418688
+{txt}{space 3}riqueza_5 {c |}{col 14}{res}{space 2} .7427737{col 26}{space 2} .2944842{col 37}{space 1}   -0.75{col 46}{space 3}0.453{col 54}{space 4}  .341495{col 67}{space 3} 1.615581
+{txt}{space 4}eps_cont {c |}{col 14}{res}{space 2} .6639865{col 26}{space 2} .1425181{col 37}{space 1}   -1.91{col 46}{space 3}0.056{col 54}{space 4} .4359707{col 67}{space 3} 1.011256
+{txt}{space 5}eps_sub {c |}{col 14}{res}{space 2} .8272213{col 26}{space 2} .1338087{col 37}{space 1}   -1.17{col 46}{space 3}0.241{col 54}{space 4} .6024681{col 67}{space 3}  1.13582
+{txt}{space 5}eps_esp {c |}{col 14}{res}{space 2} .5300763{col 26}{space 2} .3209345{col 37}{space 1}   -1.05{col 46}{space 3}0.294{col 54}{space 4} .1618001{col 67}{space 3} 1.736593
+{txt}{space 4}obesidad {c |}{col 14}{res}{space 2} 1.135652{col 26}{space 2} .1663607{col 37}{space 1}    0.87{col 46}{space 3}0.385{col 54}{space 4} .8522239{col 67}{space 3} 1.513342
+{txt}{space 4}bajopeso {c |}{col 14}{res}{space 2} 1.351427{col 26}{space 2}  .403879{col 37}{space 1}    1.01{col 46}{space 3}0.314{col 54}{space 4} .7523292{col 67}{space 3} 2.427601
+{txt}{space 6}urbano {c |}{col 14}{res}{space 2} 1.021102{col 26}{space 2} .1664585{col 37}{space 1}    0.13{col 46}{space 3}0.898{col 54}{space 4} .7418352{col 67}{space 3} 1.405499
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .2641218{col 26}{space 2} .0866126{col 37}{space 1}   -4.06{col 46}{space 3}0.000{col 54}{space 4} .1388905{col 67}{space 3} .5022685
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(output written to {browse  `"E:/Dropbox\Trabajo de Grado\Procesamiento de informacion/Tablas/reg_deptos.csv"'})
+{res}
+{txt}Multinomial logistic regression{col 51}Number of obs{col 67}= {res}      2433
+{txt}{col 51}Wald chi2({res}34{txt}){col 67}= {res}    245.23
+{txt}{col 51}Prob > chi2{col 67}= {res}    0.0000
+{txt}Log pseudolikelihood = {res}-2113.7669{txt}{col 51}Pseudo R2{col 67}= {res}    0.0608
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}       salud{col 14}{c |}        RRR{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}Muy_bueno    {txt}{c |}
+{space 8}edad {c |}{col 14}{res}{space 2} .9878474{col 26}{space 2} .0057618{col 37}{space 1}   -2.10{col 46}{space 3}0.036{col 54}{space 4} .9766187{col 67}{space 3} .9992052
+{txt}{space 8}sexo {c |}{col 14}{res}{space 2} 1.185737{col 26}{space 2} .1747074{col 37}{space 1}    1.16{col 46}{space 3}0.248{col 54}{space 4} .8883243{col 67}{space 3} 1.582723
+{txt}tamaño_hogar {c |}{col 14}{res}{space 2} .9909017{col 26}{space 2} .0255827{col 37}{space 1}   -0.35{col 46}{space 3}0.723{col 54}{space 4} .9420079{col 67}{space 3} 1.042333
+{txt}estado_civil {c |}{col 14}{res}{space 2} .7738372{col 26}{space 2} .1085786{col 37}{space 1}   -1.83{col 46}{space 3}0.068{col 54}{space 4} .5877815{col 67}{space 3} 1.018787
+{txt}{space 7}etnia {c |}{col 14}{res}{space 2} .9384263{col 26}{space 2} .1516508{col 37}{space 1}   -0.39{col 46}{space 3}0.694{col 54}{space 4} .6836675{col 67}{space 3} 1.288117
+{txt}{space 3}ocupacion {c |}{col 14}{res}{space 2} 1.140292{col 26}{space 2} .1690623{col 37}{space 1}    0.89{col 46}{space 3}0.376{col 54}{space 4} .8527366{col 67}{space 3} 1.524815
+{txt}{space 3}educacion {c |}{col 14}{res}{space 2} 1.017569{col 26}{space 2} .0190043{col 37}{space 1}    0.93{col 46}{space 3}0.351{col 54}{space 4} .9809946{col 67}{space 3} 1.055507
+{txt}{space 3}riqueza_2 {c |}{col 14}{res}{space 2} 1.606796{col 26}{space 2} .3363558{col 37}{space 1}    2.27{col 46}{space 3}0.023{col 54}{space 4} 1.066046{col 67}{space 3}  2.42184
+{txt}{space 3}riqueza_3 {c |}{col 14}{res}{space 2} 1.490613{col 26}{space 2} .3762651{col 37}{space 1}    1.58{col 46}{space 3}0.114{col 54}{space 4} .9088701{col 67}{space 3} 2.444712
+{txt}{space 3}riqueza_4 {c |}{col 14}{res}{space 2} 1.598337{col 26}{space 2}   .46781{col 37}{space 1}    1.60{col 46}{space 3}0.109{col 54}{space 4} .9006048{col 67}{space 3}  2.83663
+{txt}{space 3}riqueza_5 {c |}{col 14}{res}{space 2} 3.359207{col 26}{space 2}  1.06839{col 37}{space 1}    3.81{col 46}{space 3}0.000{col 54}{space 4} 1.800999{col 67}{space 3} 6.265562
+{txt}{space 4}eps_cont {c |}{col 14}{res}{space 2} 1.230121{col 26}{space 2}  .242236{col 37}{space 1}    1.05{col 46}{space 3}0.293{col 54}{space 4} .8362364{col 67}{space 3} 1.809535
+{txt}{space 5}eps_sub {c |}{col 14}{res}{space 2}  .972984{col 26}{space 2} .1641614{col 37}{space 1}   -0.16{col 46}{space 3}0.871{col 54}{space 4} .6990228{col 67}{space 3} 1.354316
+{txt}{space 5}eps_esp {c |}{col 14}{res}{space 2} 1.073118{col 26}{space 2} .5931654{col 37}{space 1}    0.13{col 46}{space 3}0.898{col 54}{space 4} .3632006{col 67}{space 3} 3.170653
+{txt}{space 4}obesidad {c |}{col 14}{res}{space 2} 1.072322{col 26}{space 2} .1940747{col 37}{space 1}    0.39{col 46}{space 3}0.700{col 54}{space 4} .7520908{col 67}{space 3} 1.528905
+{txt}{space 4}bajopeso {c |}{col 14}{res}{space 2}  .998245{col 26}{space 2} .3236719{col 37}{space 1}   -0.01{col 46}{space 3}0.996{col 54}{space 4} .5287407{col 67}{space 3} 1.884654
+{txt}{space 6}urbano {c |}{col 14}{res}{space 2} 1.097083{col 26}{space 2}  .230253{col 37}{space 1}    0.44{col 46}{space 3}0.659{col 54}{space 4} .7270958{col 67}{space 3} 1.655342
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .2354375{col 26}{space 2} .0920673{col 37}{space 1}   -3.70{col 46}{space 3}0.000{col 54}{space 4} .1093995{col 67}{space 3} .5066828
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}bueno       {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}malo         {txt}{c |}
+{space 8}edad {c |}{col 14}{res}{space 2} 1.032008{col 26}{space 2} .0044972{col 37}{space 1}    7.23{col 46}{space 3}0.000{col 54}{space 4} 1.023231{col 67}{space 3}  1.04086
+{txt}{space 8}sexo {c |}{col 14}{res}{space 2} .5059905{col 26}{space 2} .0576667{col 37}{space 1}   -5.98{col 46}{space 3}0.000{col 54}{space 4} .4046996{col 67}{space 3} .6326333
+{txt}tamaño_hogar {c |}{col 14}{res}{space 2} 1.014875{col 26}{space 2} .0193145{col 37}{space 1}    0.78{col 46}{space 3}0.438{col 54}{space 4} .9777162{col 67}{space 3} 1.053445
+{txt}estado_civil {c |}{col 14}{res}{space 2} .8696021{col 26}{space 2} .0909387{col 37}{space 1}   -1.34{col 46}{space 3}0.182{col 54}{space 4} .7084449{col 67}{space 3} 1.067419
+{txt}{space 7}etnia {c |}{col 14}{res}{space 2} .8857577{col 26}{space 2} .1026053{col 37}{space 1}   -1.05{col 46}{space 3}0.295{col 54}{space 4} .7058502{col 67}{space 3}  1.11152
+{txt}{space 3}ocupacion {c |}{col 14}{res}{space 2} 1.117437{col 26}{space 2} .1242405{col 37}{space 1}    1.00{col 46}{space 3}0.318{col 54}{space 4} .8986359{col 67}{space 3} 1.389513
+{txt}{space 3}educacion {c |}{col 14}{res}{space 2} .9762033{col 26}{space 2} .0138969{col 37}{space 1}   -1.69{col 46}{space 3}0.091{col 54}{space 4} .9493423{col 67}{space 3} 1.003824
+{txt}{space 3}riqueza_2 {c |}{col 14}{res}{space 2} .6950766{col 26}{space 2} .0946972{col 37}{space 1}   -2.67{col 46}{space 3}0.008{col 54}{space 4} .5321879{col 67}{space 3} .9078211
+{txt}{space 3}riqueza_3 {c |}{col 14}{res}{space 2} .9612404{col 26}{space 2} .1623582{col 37}{space 1}   -0.23{col 46}{space 3}0.815{col 54}{space 4}  .690335{col 67}{space 3} 1.338456
+{txt}{space 3}riqueza_4 {c |}{col 14}{res}{space 2} .8348109{col 26}{space 2} .1751671{col 37}{space 1}   -0.86{col 46}{space 3}0.390{col 54}{space 4} .5533268{col 67}{space 3} 1.259489
+{txt}{space 3}riqueza_5 {c |}{col 14}{res}{space 2} .4532298{col 26}{space 2}  .142786{col 37}{space 1}   -2.51{col 46}{space 3}0.012{col 54}{space 4} .2444302{col 67}{space 3}  .840392
+{txt}{space 4}eps_cont {c |}{col 14}{res}{space 2} .7161127{col 26}{space 2} .1132681{col 37}{space 1}   -2.11{col 46}{space 3}0.035{col 54}{space 4} .5252258{col 67}{space 3} .9763749
+{txt}{space 5}eps_sub {c |}{col 14}{res}{space 2} 1.034731{col 26}{space 2} .1269921{col 37}{space 1}    0.28{col 46}{space 3}0.781{col 54}{space 4} .8135047{col 67}{space 3} 1.316119
+{txt}{space 5}eps_esp {c |}{col 14}{res}{space 2} 1.380663{col 26}{space 2} .5650067{col 37}{space 1}    0.79{col 46}{space 3}0.431{col 54}{space 4} .6190875{col 67}{space 3} 3.079099
+{txt}{space 4}obesidad {c |}{col 14}{res}{space 2} 1.192114{col 26}{space 2} .1596865{col 37}{space 1}    1.31{col 46}{space 3}0.190{col 54}{space 4} .9168484{col 67}{space 3} 1.550024
+{txt}{space 4}bajopeso {c |}{col 14}{res}{space 2} .9496562{col 26}{space 2}  .208823{col 37}{space 1}   -0.23{col 46}{space 3}0.814{col 54}{space 4} .6171532{col 67}{space 3} 1.461302
+{txt}{space 6}urbano {c |}{col 14}{res}{space 2} .9918974{col 26}{space 2} .1295897{col 37}{space 1}   -0.06{col 46}{space 3}0.950{col 54}{space 4} .7678187{col 67}{space 3} 1.281371
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .3642991{col 26}{space 2} .1047762{col 37}{space 1}   -3.51{col 46}{space 3}0.000{col 54}{space 4} .2073212{col 67}{space 3} .6401365
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(output written to {browse  `"E:/Dropbox\Trabajo de Grado\Procesamiento de informacion/Tablas/reg_deptos.csv"'})
+{res}
+{txt}Multinomial logistic regression{col 51}Number of obs{col 67}= {res}      2825
+{txt}{col 51}Wald chi2({res}34{txt}){col 67}= {res}    317.31
+{txt}{col 51}Prob > chi2{col 67}= {res}    0.0000
+{txt}Log pseudolikelihood = {res}-1448.7332{txt}{col 51}Pseudo R2{col 67}= {res}    0.0719
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}       salud{col 14}{c |}        RRR{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}Muy_bueno    {txt}{c |}
+{space 8}edad {c |}{col 14}{res}{space 2} .9859303{col 26}{space 2} .0066766{col 37}{space 1}   -2.09{col 46}{space 3}0.036{col 54}{space 4} .9729308{col 67}{space 3} .9991035
+{txt}{space 8}sexo {c |}{col 14}{res}{space 2} 1.683721{col 26}{space 2} .2690205{col 37}{space 1}    3.26{col 46}{space 3}0.001{col 54}{space 4} 1.231027{col 67}{space 3} 2.302888
+{txt}tamaño_hogar {c |}{col 14}{res}{space 2} .9374848{col 26}{space 2} .0313813{col 37}{space 1}   -1.93{col 46}{space 3}0.054{col 54}{space 4} .8779529{col 67}{space 3} 1.001053
+{txt}estado_civil {c |}{col 14}{res}{space 2} .9036233{col 26}{space 2} .1383199{col 37}{space 1}   -0.66{col 46}{space 3}0.508{col 54}{space 4} .6694094{col 67}{space 3} 1.219784
+{txt}{space 7}etnia {c |}{col 14}{res}{space 2} 1.041609{col 26}{space 2} .1743791{col 37}{space 1}    0.24{col 46}{space 3}0.808{col 54}{space 4}  .750244{col 67}{space 3} 1.446129
+{txt}{space 3}ocupacion {c |}{col 14}{res}{space 2} .9928001{col 26}{space 2} .1609078{col 37}{space 1}   -0.04{col 46}{space 3}0.964{col 54}{space 4} .7226093{col 67}{space 3} 1.364018
+{txt}{space 3}educacion {c |}{col 14}{res}{space 2} .9969673{col 26}{space 2}   .02068{col 37}{space 1}   -0.15{col 46}{space 3}0.884{col 54}{space 4} .9572481{col 67}{space 3} 1.038335
+{txt}{space 3}riqueza_2 {c |}{col 14}{res}{space 2} 1.148511{col 26}{space 2} .2815972{col 37}{space 1}    0.56{col 46}{space 3}0.572{col 54}{space 4} .7102866{col 67}{space 3} 1.857106
+{txt}{space 3}riqueza_3 {c |}{col 14}{res}{space 2} 1.524365{col 26}{space 2} .4462432{col 37}{space 1}    1.44{col 46}{space 3}0.150{col 54}{space 4} .8588316{col 67}{space 3}  2.70564
+{txt}{space 3}riqueza_4 {c |}{col 14}{res}{space 2} 2.268932{col 26}{space 2} .6839373{col 37}{space 1}    2.72{col 46}{space 3}0.007{col 54}{space 4} 1.256721{col 67}{space 3} 4.096416
+{txt}{space 3}riqueza_5 {c |}{col 14}{res}{space 2} 2.100777{col 26}{space 2} .7174197{col 37}{space 1}    2.17{col 46}{space 3}0.030{col 54}{space 4} 1.075705{col 67}{space 3} 4.102675
+{txt}{space 4}eps_cont {c |}{col 14}{res}{space 2} .8224981{col 26}{space 2} .1895929{col 37}{space 1}   -0.85{col 46}{space 3}0.397{col 54}{space 4} .5235108{col 67}{space 3} 1.292243
+{txt}{space 5}eps_sub {c |}{col 14}{res}{space 2} .4517258{col 26}{space 2} .0810895{col 37}{space 1}   -4.43{col 46}{space 3}0.000{col 54}{space 4} .3177425{col 67}{space 3} .6422062
+{txt}{space 5}eps_esp {c |}{col 14}{res}{space 2} .4914519{col 26}{space 2} .1875528{col 37}{space 1}   -1.86{col 46}{space 3}0.063{col 54}{space 4} .2326147{col 67}{space 3} 1.038305
+{txt}{space 4}obesidad {c |}{col 14}{res}{space 2} .8841842{col 26}{space 2} .1907521{col 37}{space 1}   -0.57{col 46}{space 3}0.568{col 54}{space 4} .5793036{col 67}{space 3}  1.34952
+{txt}{space 4}bajopeso {c |}{col 14}{res}{space 2} .7844667{col 26}{space 2} .2882554{col 37}{space 1}   -0.66{col 46}{space 3}0.509{col 54}{space 4} .3817659{col 67}{space 3} 1.611951
+{txt}{space 6}urbano {c |}{col 14}{res}{space 2} .6040312{col 26}{space 2} .1373034{col 37}{space 1}   -2.22{col 46}{space 3}0.027{col 54}{space 4} .3868755{col 67}{space 3} .9430776
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .5701674{col 26}{space 2} .2291997{col 37}{space 1}   -1.40{col 46}{space 3}0.162{col 54}{space 4} .2593168{col 67}{space 3} 1.253644
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}bueno       {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}malo         {txt}{c |}
+{space 8}edad {c |}{col 14}{res}{space 2} 1.034612{col 26}{space 2} .0042577{col 37}{space 1}    8.27{col 46}{space 3}0.000{col 54}{space 4}   1.0263{col 67}{space 3}  1.04299
+{txt}{space 8}sexo {c |}{col 14}{res}{space 2} .6903921{col 26}{space 2}    .0754{col 37}{space 1}   -3.39{col 46}{space 3}0.001{col 54}{space 4} .5573568{col 67}{space 3} .8551817
+{txt}tamaño_hogar {c |}{col 14}{res}{space 2} .9624663{col 26}{space 2} .0167302{col 37}{space 1}   -2.20{col 46}{space 3}0.028{col 54}{space 4} .9302279{col 67}{space 3} .9958219
+{txt}estado_civil {c |}{col 14}{res}{space 2} 1.210252{col 26}{space 2} .1168894{col 37}{space 1}    1.98{col 46}{space 3}0.048{col 54}{space 4} 1.001531{col 67}{space 3}  1.46247
+{txt}{space 7}etnia {c |}{col 14}{res}{space 2} .8703542{col 26}{space 2} .0915848{col 37}{space 1}   -1.32{col 46}{space 3}0.187{col 54}{space 4} .7081522{col 67}{space 3} 1.069709
+{txt}{space 3}ocupacion {c |}{col 14}{res}{space 2} 1.092414{col 26}{space 2} .1177878{col 37}{space 1}    0.82{col 46}{space 3}0.412{col 54}{space 4} .8843167{col 67}{space 3} 1.349481
+{txt}{space 3}educacion {c |}{col 14}{res}{space 2} .9736448{col 26}{space 2} .0127829{col 37}{space 1}   -2.03{col 46}{space 3}0.042{col 54}{space 4} .9489104{col 67}{space 3} .9990239
+{txt}{space 3}riqueza_2 {c |}{col 14}{res}{space 2} .8359828{col 26}{space 2} .1154174{col 37}{space 1}   -1.30{col 46}{space 3}0.194{col 54}{space 4} .6377916{col 67}{space 3} 1.095761
+{txt}{space 3}riqueza_3 {c |}{col 14}{res}{space 2} .6444183{col 26}{space 2} .1082937{col 37}{space 1}   -2.61{col 46}{space 3}0.009{col 54}{space 4} .4635798{col 67}{space 3} .8958005
+{txt}{space 3}riqueza_4 {c |}{col 14}{res}{space 2} .4336438{col 26}{space 2} .0915367{col 37}{space 1}   -3.96{col 46}{space 3}0.000{col 54}{space 4} .2867182{col 67}{space 3} .6558598
+{txt}{space 3}riqueza_5 {c |}{col 14}{res}{space 2} .4168215{col 26}{space 2} .1044725{col 37}{space 1}   -3.49{col 46}{space 3}0.000{col 54}{space 4} .2550376{col 67}{space 3} .6812335
+{txt}{space 4}eps_cont {c |}{col 14}{res}{space 2} .6435018{col 26}{space 2} .1125353{col 37}{space 1}   -2.52{col 46}{space 3}0.012{col 54}{space 4} .4567642{col 67}{space 3} .9065829
+{txt}{space 5}eps_sub {c |}{col 14}{res}{space 2} .7571722{col 26}{space 2} .0902674{col 37}{space 1}   -2.33{col 46}{space 3}0.020{col 54}{space 4} .5994009{col 67}{space 3} .9564712
+{txt}{space 5}eps_esp {c |}{col 14}{res}{space 2} .4814465{col 26}{space 2} .1501712{col 37}{space 1}   -2.34{col 46}{space 3}0.019{col 54}{space 4} .2612427{col 67}{space 3} .8872621
+{txt}{space 4}obesidad {c |}{col 14}{res}{space 2} .9752813{col 26}{space 2} .1240677{col 37}{space 1}   -0.20{col 46}{space 3}0.844{col 54}{space 4} .7600579{col 67}{space 3} 1.251449
+{txt}{space 4}bajopeso {c |}{col 14}{res}{space 2}  1.20206{col 26}{space 2} .2381234{col 37}{space 1}    0.93{col 46}{space 3}0.353{col 54}{space 4} .8152795{col 67}{space 3} 1.772335
+{txt}{space 6}urbano {c |}{col 14}{res}{space 2}  .952022{col 26}{space 2} .1245406{col 37}{space 1}   -0.38{col 46}{space 3}0.707{col 54}{space 4}  .736708{col 67}{space 3} 1.230265
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .4372097{col 26}{space 2} .1124815{col 37}{space 1}   -3.22{col 46}{space 3}0.001{col 54}{space 4} .2640584{col 67}{space 3} .7239017
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(output written to {browse  `"E:/Dropbox\Trabajo de Grado\Procesamiento de informacion/Tablas/reg_deptos.csv"'})
+{res}
+{txt}Multinomial logistic regression{col 51}Number of obs{col 67}= {res}      2400
+{txt}{col 51}Wald chi2({res}34{txt}){col 67}= {res}    220.36
+{txt}{col 51}Prob > chi2{col 67}= {res}    0.0000
+{txt}Log pseudolikelihood = {res}-118.61584{txt}{col 51}Pseudo R2{col 67}= {res}    0.0606
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}       salud{col 14}{c |}        RRR{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}Muy_bueno    {txt}{c |}
+{space 8}edad {c |}{col 14}{res}{space 2} .9894942{col 26}{space 2}  .005803{col 37}{space 1}   -1.80{col 46}{space 3}0.072{col 54}{space 4} .9781856{col 67}{space 3} 1.000934
+{txt}{space 8}sexo {c |}{col 14}{res}{space 2} 1.469693{col 26}{space 2} .1861142{col 37}{space 1}    3.04{col 46}{space 3}0.002{col 54}{space 4} 1.146661{col 67}{space 3} 1.883729
+{txt}tamaño_hogar {c |}{col 14}{res}{space 2} .9094171{col 26}{space 2} .0299791{col 37}{space 1}   -2.88{col 46}{space 3}0.004{col 54}{space 4} .8525171{col 67}{space 3} .9701147
+{txt}estado_civil {c |}{col 14}{res}{space 2} .9244957{col 26}{space 2} .1240091{col 37}{space 1}   -0.59{col 46}{space 3}0.558{col 54}{space 4} .7107669{col 67}{space 3} 1.202493
+{txt}{space 7}etnia {c |}{col 14}{res}{space 2} 1.436894{col 26}{space 2} .1886501{col 37}{space 1}    2.76{col 46}{space 3}0.006{col 54}{space 4} 1.110888{col 67}{space 3} 1.858571
+{txt}{space 3}ocupacion {c |}{col 14}{res}{space 2} 1.146511{col 26}{space 2} .1843139{col 37}{space 1}    0.85{col 46}{space 3}0.395{col 54}{space 4}   .83664{col 67}{space 3} 1.571151
+{txt}{space 3}educacion {c |}{col 14}{res}{space 2} 1.035111{col 26}{space 2} .0214705{col 37}{space 1}    1.66{col 46}{space 3}0.096{col 54}{space 4} .9938737{col 67}{space 3}  1.07806
+{txt}{space 3}riqueza_2 {c |}{col 14}{res}{space 2} 1.192497{col 26}{space 2} .1989391{col 37}{space 1}    1.06{col 46}{space 3}0.291{col 54}{space 4} .8599144{col 67}{space 3} 1.653711
+{txt}{space 3}riqueza_3 {c |}{col 14}{res}{space 2} 1.479469{col 26}{space 2} .3881691{col 37}{space 1}    1.49{col 46}{space 3}0.135{col 54}{space 4} .8846582{col 67}{space 3} 2.474207
+{txt}{space 3}riqueza_4 {c |}{col 14}{res}{space 2} 1.502374{col 26}{space 2} .5145424{col 37}{space 1}    1.19{col 46}{space 3}0.235{col 54}{space 4} .7678094{col 67}{space 3} 2.939699
+{txt}{space 3}riqueza_5 {c |}{col 14}{res}{space 2} 3.467513{col 26}{space 2}  3.33774{col 37}{space 1}    1.29{col 46}{space 3}0.196{col 54}{space 4} .5256214{col 67}{space 3}  22.8751
+{txt}{space 4}eps_cont {c |}{col 14}{res}{space 2} 1.600137{col 26}{space 2} .4225754{col 37}{space 1}    1.78{col 46}{space 3}0.075{col 54}{space 4} .9535996{col 67}{space 3} 2.685026
+{txt}{space 5}eps_sub {c |}{col 14}{res}{space 2}  1.35741{col 26}{space 2} .3688735{col 37}{space 1}    1.12{col 46}{space 3}0.261{col 54}{space 4}  .796891{col 67}{space 3}  2.31219
+{txt}{space 5}eps_esp {c |}{col 14}{res}{space 2} 1.135128{col 26}{space 2} .6275208{col 37}{space 1}    0.23{col 46}{space 3}0.819{col 54}{space 4} .3841354{col 67}{space 3} 3.354328
+{txt}{space 4}obesidad {c |}{col 14}{res}{space 2} 1.004087{col 26}{space 2} .1440081{col 37}{space 1}    0.03{col 46}{space 3}0.977{col 54}{space 4} .7580366{col 67}{space 3} 1.330002
+{txt}{space 4}bajopeso {c |}{col 14}{res}{space 2} 1.157126{col 26}{space 2} .4197773{col 37}{space 1}    0.40{col 46}{space 3}0.687{col 54}{space 4} .5683101{col 67}{space 3} 2.356004
+{txt}{space 6}urbano {c |}{col 14}{res}{space 2} 1.277923{col 26}{space 2} .2013692{col 37}{space 1}    1.56{col 46}{space 3}0.120{col 54}{space 4} .9383745{col 67}{space 3} 1.740336
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .1002337{col 26}{space 2} .0460532{col 37}{space 1}   -5.01{col 46}{space 3}0.000{col 54}{space 4} .0407307{col 67}{space 3} .2466636
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}bueno       {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}malo         {txt}{c |}
+{space 8}edad {c |}{col 14}{res}{space 2} 1.044118{col 26}{space 2} .0054248{col 37}{space 1}    8.31{col 46}{space 3}0.000{col 54}{space 4}  1.03354{col 67}{space 3} 1.054805
+{txt}{space 8}sexo {c |}{col 14}{res}{space 2} .8155202{col 26}{space 2} .0978563{col 37}{space 1}   -1.70{col 46}{space 3}0.089{col 54}{space 4} .6446098{col 67}{space 3} 1.031745
+{txt}tamaño_hogar {c |}{col 14}{res}{space 2} .9566398{col 26}{space 2} .0254204{col 37}{space 1}   -1.67{col 46}{space 3}0.095{col 54}{space 4} .9080918{col 67}{space 3} 1.007783
+{txt}estado_civil {c |}{col 14}{res}{space 2} 1.282238{col 26}{space 2}  .149375{col 37}{space 1}    2.13{col 46}{space 3}0.033{col 54}{space 4} 1.020487{col 67}{space 3} 1.611127
+{txt}{space 7}etnia {c |}{col 14}{res}{space 2} 1.141112{col 26}{space 2} .1376372{col 37}{space 1}    1.09{col 46}{space 3}0.274{col 54}{space 4} .9008635{col 67}{space 3} 1.445431
+{txt}{space 3}ocupacion {c |}{col 14}{res}{space 2} .8061329{col 26}{space 2}  .105309{col 37}{space 1}   -1.65{col 46}{space 3}0.099{col 54}{space 4} .6240366{col 67}{space 3} 1.041366
+{txt}{space 3}educacion {c |}{col 14}{res}{space 2} .9522294{col 26}{space 2} .0161945{col 37}{space 1}   -2.88{col 46}{space 3}0.004{col 54}{space 4} .9210119{col 67}{space 3}  .984505
+{txt}{space 3}riqueza_2 {c |}{col 14}{res}{space 2} 1.111636{col 26}{space 2} .1538214{col 37}{space 1}    0.76{col 46}{space 3}0.444{col 54}{space 4} .8475759{col 67}{space 3} 1.457964
+{txt}{space 3}riqueza_3 {c |}{col 14}{res}{space 2} .8036573{col 26}{space 2} .2194195{col 37}{space 1}   -0.80{col 46}{space 3}0.423{col 54}{space 4} .4706202{col 67}{space 3}  1.37237
+{txt}{space 3}riqueza_4 {c |}{col 14}{res}{space 2} .9715782{col 26}{space 2} .4040272{col 37}{space 1}   -0.07{col 46}{space 3}0.945{col 54}{space 4} .4300399{col 67}{space 3} 2.195062
+{txt}{space 3}riqueza_5 {c |}{col 14}{res}{space 2} 1.663941{col 26}{space 2} 2.121516{col 37}{space 1}    0.40{col 46}{space 3}0.690{col 54}{space 4} .1367288{col 67}{space 3} 20.24956
+{txt}{space 4}eps_cont {c |}{col 14}{res}{space 2} .5143451{col 26}{space 2} .1009173{col 37}{space 1}   -3.39{col 46}{space 3}0.001{col 54}{space 4} .3501419{col 67}{space 3} .7555531
+{txt}{space 5}eps_sub {c |}{col 14}{res}{space 2} .6926913{col 26}{space 2} .1374185{col 37}{space 1}   -1.85{col 46}{space 3}0.064{col 54}{space 4}  .469543{col 67}{space 3}  1.02189
+{txt}{space 5}eps_esp {c |}{col 14}{res}{space 2}  1.15109{col 26}{space 2}  .462474{col 37}{space 1}    0.35{col 46}{space 3}0.726{col 54}{space 4}  .523747{col 67}{space 3} 2.529862
+{txt}{space 4}obesidad {c |}{col 14}{res}{space 2} 1.049707{col 26}{space 2} .1283498{col 37}{space 1}    0.40{col 46}{space 3}0.692{col 54}{space 4}  .826019{col 67}{space 3} 1.333971
+{txt}{space 4}bajopeso {c |}{col 14}{res}{space 2} 1.193549{col 26}{space 2} .4375963{col 37}{space 1}    0.48{col 46}{space 3}0.629{col 54}{space 4} .5817822{col 67}{space 3} 2.448613
+{txt}{space 6}urbano {c |}{col 14}{res}{space 2} .8103767{col 26}{space 2} .1058552{col 37}{space 1}   -1.61{col 46}{space 3}0.107{col 54}{space 4} .6273342{col 67}{space 3} 1.046827
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .1816083{col 26}{space 2} .0726273{col 37}{space 1}   -4.27{col 46}{space 3}0.000{col 54}{space 4} .0829336{col 67}{space 3} .3976867
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(output written to {browse  `"E:/Dropbox\Trabajo de Grado\Procesamiento de informacion/Tablas/reg_deptos.csv"'})
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\JUAN\AppData\Local\Temp\STD01000000.tmp"
+{txt}
+{com}. set more off
+{txt}
+{com}. use "${c -(}B{c )-}regresion_colombia", clear
+{txt}
+{com}. 
+. global indep "edad sexo tamaño_hogar estado_civil etnia ocupacion educacion riqueza_2 riqueza_3 riqueza_4 riqueza_5 eps_cont eps_sub eps_esp obesidad bajopeso urbano"
+{txt}
+{com}. global indep2 "edad sexo tamaño_hogar etnia ocupacion educacion riqueza_2 riqueza_3 riqueza_4 riqueza_5 eps_cont eps_sub eps_esp obesidad bajopeso"
+{txt}
+{com}. 
+. foreach x in atlantico bolivar cesar cordoba guajira magdalena sucre san_andres{c -(}
+{txt}  2{com}. local a=substr("`x'",1,3)
+{txt}  3{com}. eststo modelo`a': mlogit salud ${c -(}indep{c )-} [pw=pon] if `x'==1, nolog rrr
+{txt}  4{com}. 
+. if "`a'"=="atl"{c -(}
+{txt}  5{com}. esttab modelo`a' using "${c -(}T{c )-}reg_deptos.csv",  replace cells(`"b(fmt(3) label("Coef.")) & _star"')  starlevels(** 0.05) drop("o.*" ) unstack  plain ///
+> mlabels("Modelo `a'", span) eqlabels("Muy Bueno" "Malo") eform
+{txt}  6{com}. {c )-}
+{txt}  7{com}. else {c -(}
+{txt}  8{com}. esttab modelo`a' using "${c -(}T{c )-}reg_deptos.csv",  append cells(`"b(fmt(3) label("Coef.")) & _star "')  starlevels(** 0.05) drop("o.*" ) unstack  plain ///
+> mlabels("Modelo `a'", span) eqlabels("Muy Bueno" "Malo") eform
+{txt}  9{com}. {c )-}
+{txt} 10{com}. * 
+. {c )-}
+{res}
+{txt}Multinomial logistic regression{col 51}Number of obs{col 67}= {res}      3102
+{txt}{col 51}Wald chi2({res}34{txt}){col 67}= {res}    320.06
+{txt}{col 51}Prob > chi2{col 67}= {res}    0.0000
+{txt}Log pseudolikelihood = {res}-3572.3521{txt}{col 51}Pseudo R2{col 67}= {res}    0.0656
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}       salud{col 14}{c |}        RRR{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}Muy_bueno    {txt}{c |}
+{space 8}edad {c |}{col 14}{res}{space 2} .9882153{col 26}{space 2} .0055664{col 37}{space 1}   -2.10{col 46}{space 3}0.035{col 54}{space 4} .9773654{col 67}{space 3} .9991857
+{txt}{space 8}sexo {c |}{col 14}{res}{space 2} 1.466967{col 26}{space 2} .1791587{col 37}{space 1}    3.14{col 46}{space 3}0.002{col 54}{space 4} 1.154687{col 67}{space 3} 1.863702
+{txt}tamaño_hogar {c |}{col 14}{res}{space 2} .9264362{col 26}{space 2}  .026576{col 37}{space 1}   -2.66{col 46}{space 3}0.008{col 54}{space 4} .8757855{col 67}{space 3} .9800164
+{txt}estado_civil {c |}{col 14}{res}{space 2} 1.144284{col 26}{space 2} .1479618{col 37}{space 1}    1.04{col 46}{space 3}0.297{col 54}{space 4} .8881145{col 67}{space 3} 1.474343
+{txt}{space 7}etnia {c |}{col 14}{res}{space 2} 1.114402{col 26}{space 2} .1527327{col 37}{space 1}    0.79{col 46}{space 3}0.429{col 54}{space 4} .8518866{col 67}{space 3} 1.457814
+{txt}{space 3}ocupacion {c |}{col 14}{res}{space 2} 1.365762{col 26}{space 2} .1736726{col 37}{space 1}    2.45{col 46}{space 3}0.014{col 54}{space 4} 1.064473{col 67}{space 3} 1.752327
+{txt}{space 3}educacion {c |}{col 14}{res}{space 2} 1.021765{col 26}{space 2} .0190185{col 37}{space 1}    1.16{col 46}{space 3}0.247{col 54}{space 4} .9851607{col 67}{space 3} 1.059729
+{txt}{space 3}riqueza_2 {c |}{col 14}{res}{space 2} .8767955{col 26}{space 2} .2568161{col 37}{space 1}   -0.45{col 46}{space 3}0.654{col 54}{space 4} .4938315{col 67}{space 3} 1.556746
+{txt}{space 3}riqueza_3 {c |}{col 14}{res}{space 2}  1.21647{col 26}{space 2} .3713738{col 37}{space 1}    0.64{col 46}{space 3}0.521{col 54}{space 4} .6687127{col 67}{space 3} 2.212906
+{txt}{space 3}riqueza_4 {c |}{col 14}{res}{space 2} 1.173717{col 26}{space 2} .3681892{col 37}{space 1}    0.51{col 46}{space 3}0.610{col 54}{space 4} .6346666{col 67}{space 3} 2.170607
+{txt}{space 3}riqueza_5 {c |}{col 14}{res}{space 2} 1.570751{col 26}{space 2} .5149148{col 37}{space 1}    1.38{col 46}{space 3}0.168{col 54}{space 4} .8261738{col 67}{space 3} 2.986369
+{txt}{space 4}eps_cont {c |}{col 14}{res}{space 2} 1.025583{col 26}{space 2}  .171367{col 37}{space 1}    0.15{col 46}{space 3}0.880{col 54}{space 4} .7391652{col 67}{space 3} 1.422984
+{txt}{space 5}eps_sub {c |}{col 14}{res}{space 2} .9296098{col 26}{space 2} .1496458{col 37}{space 1}   -0.45{col 46}{space 3}0.650{col 54}{space 4} .6780735{col 67}{space 3} 1.274455
+{txt}{space 5}eps_esp {c |}{col 14}{res}{space 2} .9036011{col 26}{space 2} .3307447{col 37}{space 1}   -0.28{col 46}{space 3}0.782{col 54}{space 4} .4409729{col 67}{space 3} 1.851576
+{txt}{space 4}obesidad {c |}{col 14}{res}{space 2} .6290819{col 26}{space 2} .1064254{col 37}{space 1}   -2.74{col 46}{space 3}0.006{col 54}{space 4} .4515486{col 67}{space 3} .8764152
+{txt}{space 4}bajopeso {c |}{col 14}{res}{space 2} .9881765{col 26}{space 2} .3012698{col 37}{space 1}   -0.04{col 46}{space 3}0.969{col 54}{space 4} .5436568{col 67}{space 3} 1.796156
+{txt}{space 6}urbano {c |}{col 14}{res}{space 2} .9045276{col 26}{space 2} .2888826{col 37}{space 1}   -0.31{col 46}{space 3}0.753{col 54}{space 4} .4836934{col 67}{space 3} 1.691506
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}  .282593{col 26}{space 2} .1319067{col 37}{space 1}   -2.71{col 46}{space 3}0.007{col 54}{space 4} .1131993{col 67}{space 3} .7054708
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}bueno       {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}malo         {txt}{c |}
+{space 8}edad {c |}{col 14}{res}{space 2} 1.034411{col 26}{space 2}  .004311{col 37}{space 1}    8.12{col 46}{space 3}0.000{col 54}{space 4} 1.025996{col 67}{space 3} 1.042895
+{txt}{space 8}sexo {c |}{col 14}{res}{space 2} .8047614{col 26}{space 2} .0886263{col 37}{space 1}   -1.97{col 46}{space 3}0.049{col 54}{space 4} .6485248{col 67}{space 3} .9986372
+{txt}tamaño_hogar {c |}{col 14}{res}{space 2} .9361953{col 26}{space 2} .0201926{col 37}{space 1}   -3.06{col 46}{space 3}0.002{col 54}{space 4} .8974434{col 67}{space 3} .9766206
+{txt}estado_civil {c |}{col 14}{res}{space 2} 1.054955{col 26}{space 2} .1097029{col 37}{space 1}    0.51{col 46}{space 3}0.607{col 54}{space 4} .8604368{col 67}{space 3} 1.293448
+{txt}{space 7}etnia {c |}{col 14}{res}{space 2} .8825568{col 26}{space 2} .1032694{col 37}{space 1}   -1.07{col 46}{space 3}0.286{col 54}{space 4} .7016851{col 67}{space 3} 1.110051
+{txt}{space 3}ocupacion {c |}{col 14}{res}{space 2} .7455332{col 26}{space 2} .0793583{col 37}{space 1}   -2.76{col 46}{space 3}0.006{col 54}{space 4} .6051469{col 67}{space 3} .9184872
+{txt}{space 3}educacion {c |}{col 14}{res}{space 2} .9532833{col 26}{space 2} .0133567{col 37}{space 1}   -3.41{col 46}{space 3}0.001{col 54}{space 4} .9274608{col 67}{space 3} .9798247
+{txt}{space 3}riqueza_2 {c |}{col 14}{res}{space 2}  1.07727{col 26}{space 2} .2343017{col 37}{space 1}    0.34{col 46}{space 3}0.732{col 54}{space 4} .7033833{col 67}{space 3} 1.649899
+{txt}{space 3}riqueza_3 {c |}{col 14}{res}{space 2} .8156989{col 26}{space 2} .1856704{col 37}{space 1}   -0.89{col 46}{space 3}0.371{col 54}{space 4} .5221295{col 67}{space 3} 1.274329
+{txt}{space 3}riqueza_4 {c |}{col 14}{res}{space 2} .8690399{col 26}{space 2}  .201813{col 37}{space 1}   -0.60{col 46}{space 3}0.546{col 54}{space 4} .5512762{col 67}{space 3} 1.369967
+{txt}{space 3}riqueza_5 {c |}{col 14}{res}{space 2} .8270115{col 26}{space 2}  .208666{col 37}{space 1}   -0.75{col 46}{space 3}0.452{col 54}{space 4} .5043617{col 67}{space 3} 1.356067
+{txt}{space 4}eps_cont {c |}{col 14}{res}{space 2} .8394185{col 26}{space 2} .1222302{col 37}{space 1}   -1.20{col 46}{space 3}0.229{col 54}{space 4} .6310047{col 67}{space 3} 1.116669
+{txt}{space 5}eps_sub {c |}{col 14}{res}{space 2} 1.049838{col 26}{space 2} .1396904{col 37}{space 1}    0.37{col 46}{space 3}0.715{col 54}{space 4} .8088398{col 67}{space 3} 1.362644
+{txt}{space 5}eps_esp {c |}{col 14}{res}{space 2} .7955682{col 26}{space 2} .2409254{col 37}{space 1}   -0.76{col 46}{space 3}0.450{col 54}{space 4} .4394448{col 67}{space 3} 1.440292
+{txt}{space 4}obesidad {c |}{col 14}{res}{space 2} 1.256432{col 26}{space 2} .1421734{col 37}{space 1}    2.02{col 46}{space 3}0.044{col 54}{space 4} 1.006514{col 67}{space 3} 1.568404
+{txt}{space 4}bajopeso {c |}{col 14}{res}{space 2} 2.035454{col 26}{space 2} .4261461{col 37}{space 1}    3.39{col 46}{space 3}0.001{col 54}{space 4} 1.350368{col 67}{space 3} 3.068105
+{txt}{space 6}urbano {c |}{col 14}{res}{space 2} 1.306424{col 26}{space 2} .3442117{col 37}{space 1}    1.01{col 46}{space 3}0.310{col 54}{space 4}  .779494{col 67}{space 3} 2.189553
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .2682882{col 26}{space 2} .0941106{col 37}{space 1}   -3.75{col 46}{space 3}0.000{col 54}{space 4} .1349011{col 67}{space 3} .5335654
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(output written to {browse  `"E:/Dropbox\Trabajo de Grado\Procesamiento de informacion/Tablas/reg_deptos.csv"'})
+{res}
+{txt}Multinomial logistic regression{col 51}Number of obs{col 67}= {res}      2536
+{txt}{col 51}Wald chi2({res}34{txt}){col 67}= {res}    262.89
+{txt}{col 51}Prob > chi2{col 67}= {res}    0.0000
+{txt}Log pseudolikelihood = {res} -3522.281{txt}{col 51}Pseudo R2{col 67}= {res}    0.0605
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}       salud{col 14}{c |}        RRR{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}Muy_bueno    {txt}{c |}
+{space 8}edad {c |}{col 14}{res}{space 2} .9938578{col 26}{space 2} .0057591{col 37}{space 1}   -1.06{col 46}{space 3}0.288{col 54}{space 4} .9826341{col 67}{space 3}  1.00521
+{txt}{space 8}sexo {c |}{col 14}{res}{space 2} 1.413958{col 26}{space 2} .1909025{col 37}{space 1}    2.57{col 46}{space 3}0.010{col 54}{space 4} 1.085209{col 67}{space 3} 1.842297
+{txt}tamaño_hogar {c |}{col 14}{res}{space 2} .9856068{col 26}{space 2} .0279075{col 37}{space 1}   -0.51{col 46}{space 3}0.609{col 54}{space 4} .9323993{col 67}{space 3} 1.041851
+{txt}estado_civil {c |}{col 14}{res}{space 2} .9470511{col 26}{space 2} .1263122{col 37}{space 1}   -0.41{col 46}{space 3}0.683{col 54}{space 4} .7291974{col 67}{space 3} 1.229991
+{txt}{space 7}etnia {c |}{col 14}{res}{space 2} 1.284073{col 26}{space 2} .1649611{col 37}{space 1}    1.95{col 46}{space 3}0.052{col 54}{space 4} .9982475{col 67}{space 3} 1.651737
+{txt}{space 3}ocupacion {c |}{col 14}{res}{space 2} 1.176566{col 26}{space 2} .1645772{col 37}{space 1}    1.16{col 46}{space 3}0.245{col 54}{space 4} .8944396{col 67}{space 3} 1.547682
+{txt}{space 3}educacion {c |}{col 14}{res}{space 2} 1.025544{col 26}{space 2} .0184299{col 37}{space 1}    1.40{col 46}{space 3}0.160{col 54}{space 4} .9900512{col 67}{space 3}  1.06231
+{txt}{space 3}riqueza_2 {c |}{col 14}{res}{space 2} 1.081265{col 26}{space 2}  .224664{col 37}{space 1}    0.38{col 46}{space 3}0.707{col 54}{space 4} .7195661{col 67}{space 3} 1.624778
+{txt}{space 3}riqueza_3 {c |}{col 14}{res}{space 2} 1.120912{col 26}{space 2} .2578461{col 37}{space 1}    0.50{col 46}{space 3}0.620{col 54}{space 4} .7141143{col 67}{space 3} 1.759444
+{txt}{space 3}riqueza_4 {c |}{col 14}{res}{space 2} 1.208311{col 26}{space 2} .2692833{col 37}{space 1}    0.85{col 46}{space 3}0.396{col 54}{space 4} .7806933{col 67}{space 3} 1.870151
+{txt}{space 3}riqueza_5 {c |}{col 14}{res}{space 2} 1.694756{col 26}{space 2} .4201329{col 37}{space 1}    2.13{col 46}{space 3}0.033{col 54}{space 4}  1.04254{col 67}{space 3} 2.754999
+{txt}{space 4}eps_cont {c |}{col 14}{res}{space 2} .9984662{col 26}{space 2} .1986722{col 37}{space 1}   -0.01{col 46}{space 3}0.994{col 54}{space 4} .6760261{col 67}{space 3} 1.474699
+{txt}{space 5}eps_sub {c |}{col 14}{res}{space 2}  1.01619{col 26}{space 2} .1823299{col 37}{space 1}    0.09{col 46}{space 3}0.929{col 54}{space 4} .7149048{col 67}{space 3} 1.444448
+{txt}{space 5}eps_esp {c |}{col 14}{res}{space 2} 1.181172{col 26}{space 2} .4057444{col 37}{space 1}    0.48{col 46}{space 3}0.628{col 54}{space 4} .6024445{col 67}{space 3} 2.315845
+{txt}{space 4}obesidad {c |}{col 14}{res}{space 2}  .835055{col 26}{space 2} .1565403{col 37}{space 1}   -0.96{col 46}{space 3}0.336{col 54}{space 4}  .578293{col 67}{space 3} 1.205819
+{txt}{space 4}bajopeso {c |}{col 14}{res}{space 2}  .414183{col 26}{space 2} .1453866{col 37}{space 1}   -2.51{col 46}{space 3}0.012{col 54}{space 4} .2081629{col 67}{space 3} .8241024
+{txt}{space 6}urbano {c |}{col 14}{res}{space 2} .9361491{col 26}{space 2} .2051021{col 37}{space 1}   -0.30{col 46}{space 3}0.763{col 54}{space 4} .6093324{col 67}{space 3} 1.438255
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}  .204369{col 26}{space 2} .0799888{col 37}{space 1}   -4.06{col 46}{space 3}0.000{col 54}{space 4} .0948986{col 67}{space 3} .4401193
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}bueno       {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}malo         {txt}{c |}
+{space 8}edad {c |}{col 14}{res}{space 2} 1.036644{col 26}{space 2} .0046329{col 37}{space 1}    8.05{col 46}{space 3}0.000{col 54}{space 4} 1.027603{col 67}{space 3} 1.045764
+{txt}{space 8}sexo {c |}{col 14}{res}{space 2} .6445033{col 26}{space 2} .0731245{col 37}{space 1}   -3.87{col 46}{space 3}0.000{col 54}{space 4} .5159991{col 67}{space 3} .8050101
+{txt}tamaño_hogar {c |}{col 14}{res}{space 2} .9833779{col 26}{space 2} .0199973{col 37}{space 1}   -0.82{col 46}{space 3}0.410{col 54}{space 4} .9449547{col 67}{space 3} 1.023364
+{txt}estado_civil {c |}{col 14}{res}{space 2} 1.159955{col 26}{space 2} .1236575{col 37}{space 1}    1.39{col 46}{space 3}0.164{col 54}{space 4}  .941236{col 67}{space 3} 1.429499
+{txt}{space 7}etnia {c |}{col 14}{res}{space 2}  1.00322{col 26}{space 2} .1057019{col 37}{space 1}    0.03{col 46}{space 3}0.976{col 54}{space 4} .8160395{col 67}{space 3} 1.233334
+{txt}{space 3}ocupacion {c |}{col 14}{res}{space 2} .9914983{col 26}{space 2} .1083775{col 37}{space 1}   -0.08{col 46}{space 3}0.938{col 54}{space 4} .8002945{col 67}{space 3} 1.228384
+{txt}{space 3}educacion {c |}{col 14}{res}{space 2} .9804835{col 26}{space 2}  .014216{col 37}{space 1}   -1.36{col 46}{space 3}0.174{col 54}{space 4} .9530128{col 67}{space 3} 1.008746
+{txt}{space 3}riqueza_2 {c |}{col 14}{res}{space 2}  .811383{col 26}{space 2} .1203232{col 37}{space 1}   -1.41{col 46}{space 3}0.159{col 54}{space 4} .6067333{col 67}{space 3}  1.08506
+{txt}{space 3}riqueza_3 {c |}{col 14}{res}{space 2} .8063988{col 26}{space 2} .1342003{col 37}{space 1}   -1.29{col 46}{space 3}0.196{col 54}{space 4} .5819606{col 67}{space 3} 1.117394
+{txt}{space 3}riqueza_4 {c |}{col 14}{res}{space 2} .5941277{col 26}{space 2} .1070122{col 37}{space 1}   -2.89{col 46}{space 3}0.004{col 54}{space 4} .4174115{col 67}{space 3} .8456589
+{txt}{space 3}riqueza_5 {c |}{col 14}{res}{space 2} .3685231{col 26}{space 2} .0849708{col 37}{space 1}   -4.33{col 46}{space 3}0.000{col 54}{space 4}  .234532{col 67}{space 3} .5790649
+{txt}{space 4}eps_cont {c |}{col 14}{res}{space 2} .7156833{col 26}{space 2} .1194496{col 37}{space 1}   -2.00{col 46}{space 3}0.045{col 54}{space 4} .5160037{col 67}{space 3} .9926334
+{txt}{space 5}eps_sub {c |}{col 14}{res}{space 2}  .751951{col 26}{space 2} .1078363{col 37}{space 1}   -1.99{col 46}{space 3}0.047{col 54}{space 4} .5677012{col 67}{space 3} .9959998
+{txt}{space 5}eps_esp {c |}{col 14}{res}{space 2} .6408507{col 26}{space 2} .1978098{col 37}{space 1}   -1.44{col 46}{space 3}0.149{col 54}{space 4} .3499602{col 67}{space 3} 1.173532
+{txt}{space 4}obesidad {c |}{col 14}{res}{space 2} 1.237069{col 26}{space 2} .1587096{col 37}{space 1}    1.66{col 46}{space 3}0.097{col 54}{space 4} .9620307{col 67}{space 3} 1.590738
+{txt}{space 4}bajopeso {c |}{col 14}{res}{space 2} .9138666{col 26}{space 2} .2060313{col 37}{space 1}   -0.40{col 46}{space 3}0.690{col 54}{space 4} .5874615{col 67}{space 3} 1.421629
+{txt}{space 6}urbano {c |}{col 14}{res}{space 2} 1.030301{col 26}{space 2} .1572721{col 37}{space 1}    0.20{col 46}{space 3}0.845{col 54}{space 4} .7638906{col 67}{space 3} 1.389624
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .3359474{col 26}{space 2} .1024118{col 37}{space 1}   -3.58{col 46}{space 3}0.000{col 54}{space 4} .1848362{col 67}{space 3} .6105982
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(output written to {browse  `"E:/Dropbox\Trabajo de Grado\Procesamiento de informacion/Tablas/reg_deptos.csv"'})
+{res}
+{txt}Multinomial logistic regression{col 51}Number of obs{col 67}= {res}      2119
+{txt}{col 51}Wald chi2({res}34{txt}){col 67}= {res}    204.63
+{txt}{col 51}Prob > chi2{col 67}= {res}    0.0000
+{txt}Log pseudolikelihood = {res}-1779.4573{txt}{col 51}Pseudo R2{col 67}= {res}    0.0558
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}       salud{col 14}{c |}        RRR{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}Muy_bueno    {txt}{c |}
+{space 8}edad {c |}{col 14}{res}{space 2} .9836499{col 26}{space 2} .0059918{col 37}{space 1}   -2.71{col 46}{space 3}0.007{col 54}{space 4}  .971976{col 67}{space 3} .9954641
+{txt}{space 8}sexo {c |}{col 14}{res}{space 2} 1.231157{col 26}{space 2} .1689646{col 37}{space 1}    1.52{col 46}{space 3}0.130{col 54}{space 4} .9407936{col 67}{space 3} 1.611138
+{txt}tamaño_hogar {c |}{col 14}{res}{space 2}  .934262{col 26}{space 2} .0244363{col 37}{space 1}   -2.60{col 46}{space 3}0.009{col 54}{space 4} .8875745{col 67}{space 3} .9834052
+{txt}estado_civil {c |}{col 14}{res}{space 2} .9442112{col 26}{space 2} .1233632{col 37}{space 1}   -0.44{col 46}{space 3}0.660{col 54}{space 4} .7308998{col 67}{space 3} 1.219777
+{txt}{space 7}etnia {c |}{col 14}{res}{space 2} 1.326595{col 26}{space 2} .2310952{col 37}{space 1}    1.62{col 46}{space 3}0.105{col 54}{space 4} .9428828{col 67}{space 3} 1.866463
+{txt}{space 3}ocupacion {c |}{col 14}{res}{space 2} 1.361991{col 26}{space 2}  .191736{col 37}{space 1}    2.19{col 46}{space 3}0.028{col 54}{space 4} 1.033582{col 67}{space 3} 1.794746
+{txt}{space 3}educacion {c |}{col 14}{res}{space 2} 1.018059{col 26}{space 2} .0172884{col 37}{space 1}    1.05{col 46}{space 3}0.292{col 54}{space 4} .9847319{col 67}{space 3} 1.052514
+{txt}{space 3}riqueza_2 {c |}{col 14}{res}{space 2} .8690796{col 26}{space 2} .1794479{col 37}{space 1}   -0.68{col 46}{space 3}0.497{col 54}{space 4} .5798333{col 67}{space 3} 1.302615
+{txt}{space 3}riqueza_3 {c |}{col 14}{res}{space 2} .8055756{col 26}{space 2} .1983924{col 37}{space 1}   -0.88{col 46}{space 3}0.380{col 54}{space 4} .4971386{col 67}{space 3} 1.305375
+{txt}{space 3}riqueza_4 {c |}{col 14}{res}{space 2} .7415266{col 26}{space 2}  .211009{col 37}{space 1}   -1.05{col 46}{space 3}0.293{col 54}{space 4} .4245302{col 67}{space 3} 1.295224
+{txt}{space 3}riqueza_5 {c |}{col 14}{res}{space 2} 1.269278{col 26}{space 2} .4050517{col 37}{space 1}    0.75{col 46}{space 3}0.455{col 54}{space 4} .6790813{col 67}{space 3} 2.372423
+{txt}{space 4}eps_cont {c |}{col 14}{res}{space 2} .9843425{col 26}{space 2} .1789534{col 37}{space 1}   -0.09{col 46}{space 3}0.931{col 54}{space 4} .6892834{col 67}{space 3} 1.405706
+{txt}{space 5}eps_sub {c |}{col 14}{res}{space 2} .8697767{col 26}{space 2} .1365661{col 37}{space 1}   -0.89{col 46}{space 3}0.374{col 54}{space 4} .6393788{col 67}{space 3} 1.183198
+{txt}{space 5}eps_esp {c |}{col 14}{res}{space 2} 1.093853{col 26}{space 2} .3519552{col 37}{space 1}    0.28{col 46}{space 3}0.780{col 54}{space 4} .5822085{col 67}{space 3}  2.05513
+{txt}{space 4}obesidad {c |}{col 14}{res}{space 2} .8658205{col 26}{space 2} .1504484{col 37}{space 1}   -0.83{col 46}{space 3}0.407{col 54}{space 4} .6159136{col 67}{space 3} 1.217127
+{txt}{space 4}bajopeso {c |}{col 14}{res}{space 2} .5010104{col 26}{space 2} .1646368{col 37}{space 1}   -2.10{col 46}{space 3}0.035{col 54}{space 4} .2631078{col 67}{space 3} .9540249
+{txt}{space 6}urbano {c |}{col 14}{res}{space 2} 1.221486{col 26}{space 2} .2407044{col 37}{space 1}    1.02{col 46}{space 3}0.310{col 54}{space 4}  .830141{col 67}{space 3} 1.797319
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .7560237{col 26}{space 2}  .252562{col 37}{space 1}   -0.84{col 46}{space 3}0.402{col 54}{space 4} .3928056{col 67}{space 3} 1.455101
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}bueno       {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}malo         {txt}{c |}
+{space 8}edad {c |}{col 14}{res}{space 2}  1.03606{col 26}{space 2} .0049738{col 37}{space 1}    7.38{col 46}{space 3}0.000{col 54}{space 4} 1.026357{col 67}{space 3} 1.045854
+{txt}{space 8}sexo {c |}{col 14}{res}{space 2} .7789764{col 26}{space 2} .0994431{col 37}{space 1}   -1.96{col 46}{space 3}0.050{col 54}{space 4} .6065422{col 67}{space 3} 1.000432
+{txt}tamaño_hogar {c |}{col 14}{res}{space 2} .9730045{col 26}{space 2} .0220032{col 37}{space 1}   -1.21{col 46}{space 3}0.226{col 54}{space 4} .9308208{col 67}{space 3}   1.0171
+{txt}estado_civil {c |}{col 14}{res}{space 2} 1.006462{col 26}{space 2} .1121022{col 37}{space 1}    0.06{col 46}{space 3}0.954{col 54}{space 4} .8090743{col 67}{space 3} 1.252006
+{txt}{space 7}etnia {c |}{col 14}{res}{space 2} 1.068098{col 26}{space 2}  .164985{col 37}{space 1}    0.43{col 46}{space 3}0.670{col 54}{space 4} .7890954{col 67}{space 3}  1.44575
+{txt}{space 3}ocupacion {c |}{col 14}{res}{space 2}  1.04905{col 26}{space 2} .1306101{col 37}{space 1}    0.38{col 46}{space 3}0.701{col 54}{space 4}    .8219{col 67}{space 3} 1.338978
+{txt}{space 3}educacion {c |}{col 14}{res}{space 2} .9804732{col 26}{space 2} .0142404{col 37}{space 1}   -1.36{col 46}{space 3}0.175{col 54}{space 4} .9529561{col 67}{space 3} 1.008785
+{txt}{space 3}riqueza_2 {c |}{col 14}{res}{space 2} .8908259{col 26}{space 2} .1525398{col 37}{space 1}   -0.68{col 46}{space 3}0.500{col 54}{space 4} .6368514{col 67}{space 3} 1.246085
+{txt}{space 3}riqueza_3 {c |}{col 14}{res}{space 2}  .735869{col 26}{space 2} .1541701{col 37}{space 1}   -1.46{col 46}{space 3}0.143{col 54}{space 4} .4880534{col 67}{space 3} 1.109516
+{txt}{space 3}riqueza_4 {c |}{col 14}{res}{space 2} .7302728{col 26}{space 2} .1798695{col 37}{space 1}   -1.28{col 46}{space 3}0.202{col 54}{space 4} .4506406{col 67}{space 3} 1.183423
+{txt}{space 3}riqueza_5 {c |}{col 14}{res}{space 2} .6047813{col 26}{space 2} .1867626{col 37}{space 1}   -1.63{col 46}{space 3}0.103{col 54}{space 4} .3301708{col 67}{space 3} 1.107792
+{txt}{space 4}eps_cont {c |}{col 14}{res}{space 2} .8346832{col 26}{space 2} .1387665{col 37}{space 1}   -1.09{col 46}{space 3}0.277{col 54}{space 4}  .602572{col 67}{space 3} 1.156204
+{txt}{space 5}eps_sub {c |}{col 14}{res}{space 2} 1.096436{col 26}{space 2} .1511973{col 37}{space 1}    0.67{col 46}{space 3}0.504{col 54}{space 4} .8367647{col 67}{space 3}  1.43669
+{txt}{space 5}eps_esp {c |}{col 14}{res}{space 2} .3745027{col 26}{space 2} .1486858{col 37}{space 1}   -2.47{col 46}{space 3}0.013{col 54}{space 4} .1719924{col 67}{space 3} .8154562
+{txt}{space 4}obesidad {c |}{col 14}{res}{space 2} 1.250096{col 26}{space 2} .1710033{col 37}{space 1}    1.63{col 46}{space 3}0.103{col 54}{space 4} .9561054{col 67}{space 3} 1.634485
+{txt}{space 4}bajopeso {c |}{col 14}{res}{space 2} .8404201{col 26}{space 2} .2232832{col 37}{space 1}   -0.65{col 46}{space 3}0.513{col 54}{space 4} .4992853{col 67}{space 3} 1.414634
+{txt}{space 6}urbano {c |}{col 14}{res}{space 2} 1.002995{col 26}{space 2} .1676322{col 37}{space 1}    0.02{col 46}{space 3}0.986{col 54}{space 4} .7228302{col 67}{space 3} 1.391751
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .3356405{col 26}{space 2} .1029376{col 37}{space 1}   -3.56{col 46}{space 3}0.000{col 54}{space 4} .1840007{col 67}{space 3} .6122507
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(output written to {browse  `"E:/Dropbox\Trabajo de Grado\Procesamiento de informacion/Tablas/reg_deptos.csv"'})
+{res}
+{txt}Multinomial logistic regression{col 51}Number of obs{col 67}= {res}      2951
+{txt}{col 51}Wald chi2({res}34{txt}){col 67}= {res}    264.57
+{txt}{col 51}Prob > chi2{col 67}= {res}    0.0000
+{txt}Log pseudolikelihood = {res}-2846.1029{txt}{col 51}Pseudo R2{col 67}= {res}    0.0554
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}       salud{col 14}{c |}        RRR{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}Muy_bueno    {txt}{c |}
+{space 8}edad {c |}{col 14}{res}{space 2}  .987594{col 26}{space 2} .0065778{col 37}{space 1}   -1.87{col 46}{space 3}0.061{col 54}{space 4} .9747856{col 67}{space 3} 1.000571
+{txt}{space 8}sexo {c |}{col 14}{res}{space 2}  1.38064{col 26}{space 2}  .215525{col 37}{space 1}    2.07{col 46}{space 3}0.039{col 54}{space 4} 1.016725{col 67}{space 3}  1.87481
+{txt}tamaño_hogar {c |}{col 14}{res}{space 2} .9597184{col 26}{space 2} .0317959{col 37}{space 1}   -1.24{col 46}{space 3}0.215{col 54}{space 4} .8993798{col 67}{space 3} 1.024105
+{txt}estado_civil {c |}{col 14}{res}{space 2} .9680338{col 26}{space 2} .1503831{col 37}{space 1}   -0.21{col 46}{space 3}0.834{col 54}{space 4} .7139327{col 67}{space 3} 1.312574
+{txt}{space 7}etnia {c |}{col 14}{res}{space 2} 1.263458{col 26}{space 2} .2053869{col 37}{space 1}    1.44{col 46}{space 3}0.150{col 54}{space 4} .9187348{col 67}{space 3} 1.737527
+{txt}{space 3}ocupacion {c |}{col 14}{res}{space 2} 1.031662{col 26}{space 2} .1654561{col 37}{space 1}    0.19{col 46}{space 3}0.846{col 54}{space 4} .7533955{col 67}{space 3} 1.412705
+{txt}{space 3}educacion {c |}{col 14}{res}{space 2} 1.017179{col 26}{space 2} .0199402{col 37}{space 1}    0.87{col 46}{space 3}0.385{col 54}{space 4} .9788382{col 67}{space 3} 1.057022
+{txt}{space 3}riqueza_2 {c |}{col 14}{res}{space 2} 1.027268{col 26}{space 2} .2339685{col 37}{space 1}    0.12{col 46}{space 3}0.906{col 54}{space 4} .6573791{col 67}{space 3} 1.605284
+{txt}{space 3}riqueza_3 {c |}{col 14}{res}{space 2} 1.481482{col 26}{space 2} .4710692{col 37}{space 1}    1.24{col 46}{space 3}0.216{col 54}{space 4} .7943988{col 67}{space 3} 2.762831
+{txt}{space 3}riqueza_4 {c |}{col 14}{res}{space 2} 3.384344{col 26}{space 2} 1.113847{col 37}{space 1}    3.70{col 46}{space 3}0.000{col 54}{space 4} 1.775535{col 67}{space 3} 6.450894
+{txt}{space 3}riqueza_5 {c |}{col 14}{res}{space 2} 2.952929{col 26}{space 2} .9663944{col 37}{space 1}    3.31{col 46}{space 3}0.001{col 54}{space 4} 1.554832{col 67}{space 3}  5.60819
+{txt}{space 4}eps_cont {c |}{col 14}{res}{space 2} .7713768{col 26}{space 2} .1919011{col 37}{space 1}   -1.04{col 46}{space 3}0.297{col 54}{space 4} .4737039{col 67}{space 3} 1.256106
+{txt}{space 5}eps_sub {c |}{col 14}{res}{space 2} .7969449{col 26}{space 2} .1548545{col 37}{space 1}   -1.17{col 46}{space 3}0.243{col 54}{space 4} .5445417{col 67}{space 3} 1.166341
+{txt}{space 5}eps_esp {c |}{col 14}{res}{space 2} 1.106116{col 26}{space 2} .4501964{col 37}{space 1}    0.25{col 46}{space 3}0.804{col 54}{space 4} .4981456{col 67}{space 3} 2.456096
+{txt}{space 4}obesidad {c |}{col 14}{res}{space 2} .9135868{col 26}{space 2} .1954331{col 37}{space 1}   -0.42{col 46}{space 3}0.673{col 54}{space 4} .6007062{col 67}{space 3} 1.389433
+{txt}{space 4}bajopeso {c |}{col 14}{res}{space 2} .4541624{col 26}{space 2} .2095923{col 37}{space 1}   -1.71{col 46}{space 3}0.087{col 54}{space 4} .1838181{col 67}{space 3} 1.122106
+{txt}{space 6}urbano {c |}{col 14}{res}{space 2} 1.033859{col 26}{space 2} .2244607{col 37}{space 1}    0.15{col 46}{space 3}0.878{col 54}{space 4} .6755499{col 67}{space 3} 1.582214
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .2008626{col 26}{space 2} .0792942{col 37}{space 1}   -4.07{col 46}{space 3}0.000{col 54}{space 4} .0926556{col 67}{space 3} .4354382
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}bueno       {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}malo         {txt}{c |}
+{space 8}edad {c |}{col 14}{res}{space 2} 1.030283{col 26}{space 2} .0039602{col 37}{space 1}    7.76{col 46}{space 3}0.000{col 54}{space 4}  1.02255{col 67}{space 3} 1.038074
+{txt}{space 8}sexo {c |}{col 14}{res}{space 2} .8056793{col 26}{space 2} .0852075{col 37}{space 1}   -2.04{col 46}{space 3}0.041{col 54}{space 4} .6548478{col 67}{space 3}  .991252
+{txt}tamaño_hogar {c |}{col 14}{res}{space 2}   .99118{col 26}{space 2} .0189827{col 37}{space 1}   -0.46{col 46}{space 3}0.644{col 54}{space 4} .9546642{col 67}{space 3} 1.029093
+{txt}estado_civil {c |}{col 14}{res}{space 2}  .995015{col 26}{space 2} .0950443{col 37}{space 1}   -0.05{col 46}{space 3}0.958{col 54}{space 4} .8251302{col 67}{space 3} 1.199877
+{txt}{space 7}etnia {c |}{col 14}{res}{space 2} .8427567{col 26}{space 2} .0859037{col 37}{space 1}   -1.68{col 46}{space 3}0.093{col 54}{space 4} .6901408{col 67}{space 3} 1.029122
+{txt}{space 3}ocupacion {c |}{col 14}{res}{space 2} .7611502{col 26}{space 2} .0803187{col 37}{space 1}   -2.59{col 46}{space 3}0.010{col 54}{space 4} .6189409{col 67}{space 3} .9360339
+{txt}{space 3}educacion {c |}{col 14}{res}{space 2} .9704622{col 26}{space 2} .0119387{col 37}{space 1}   -2.44{col 46}{space 3}0.015{col 54}{space 4} .9473426{col 67}{space 3} .9941461
+{txt}{space 3}riqueza_2 {c |}{col 14}{res}{space 2} .9248376{col 26}{space 2} .1187263{col 37}{space 1}   -0.61{col 46}{space 3}0.543{col 54}{space 4}  .719105{col 67}{space 3} 1.189429
+{txt}{space 3}riqueza_3 {c |}{col 14}{res}{space 2} 1.152944{col 26}{space 2} .2276172{col 37}{space 1}    0.72{col 46}{space 3}0.471{col 54}{space 4} .7830002{col 67}{space 3} 1.697675
+{txt}{space 3}riqueza_4 {c |}{col 14}{res}{space 2}  .874724{col 26}{space 2} .2345487{col 37}{space 1}   -0.50{col 46}{space 3}0.618{col 54}{space 4} .5171656{col 67}{space 3} 1.479491
+{txt}{space 3}riqueza_5 {c |}{col 14}{res}{space 2} .5401659{col 26}{space 2} .1543267{col 37}{space 1}   -2.16{col 46}{space 3}0.031{col 54}{space 4}  .308558{col 67}{space 3} .9456219
+{txt}{space 4}eps_cont {c |}{col 14}{res}{space 2} .5932624{col 26}{space 2} .0962402{col 37}{space 1}   -3.22{col 46}{space 3}0.001{col 54}{space 4} .4316814{col 67}{space 3} .8153243
+{txt}{space 5}eps_sub {c |}{col 14}{res}{space 2} .8918995{col 26}{space 2} .1019724{col 37}{space 1}   -1.00{col 46}{space 3}0.317{col 54}{space 4} .7128473{col 67}{space 3} 1.115926
+{txt}{space 5}eps_esp {c |}{col 14}{res}{space 2} .8650662{col 26}{space 2} .2393192{col 37}{space 1}   -0.52{col 46}{space 3}0.600{col 54}{space 4} .5029975{col 67}{space 3}  1.48776
+{txt}{space 4}obesidad {c |}{col 14}{res}{space 2} 1.011407{col 26}{space 2} .1204758{col 37}{space 1}    0.10{col 46}{space 3}0.924{col 54}{space 4} .8008173{col 67}{space 3} 1.277376
+{txt}{space 4}bajopeso {c |}{col 14}{res}{space 2} 1.196661{col 26}{space 2} .2653914{col 37}{space 1}    0.81{col 46}{space 3}0.418{col 54}{space 4} .7748088{col 67}{space 3} 1.848195
+{txt}{space 6}urbano {c |}{col 14}{res}{space 2} 1.053651{col 26}{space 2} .1220233{col 37}{space 1}    0.45{col 46}{space 3}0.652{col 54}{space 4} .8396909{col 67}{space 3} 1.322131
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .3860262{col 26}{space 2} .0962852{col 37}{space 1}   -3.82{col 46}{space 3}0.000{col 54}{space 4} .2367579{col 67}{space 3} .6294034
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(output written to {browse  `"E:/Dropbox\Trabajo de Grado\Procesamiento de informacion/Tablas/reg_deptos.csv"'})
+{res}
+{txt}Multinomial logistic regression{col 51}Number of obs{col 67}= {res}      1949
+{txt}{col 51}Wald chi2({res}34{txt}){col 67}= {res}    220.83
+{txt}{col 51}Prob > chi2{col 67}= {res}    0.0000
+{txt}Log pseudolikelihood = {res}-875.05232{txt}{col 51}Pseudo R2{col 67}= {res}    0.0666
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}       salud{col 14}{c |}        RRR{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}Muy_bueno    {txt}{c |}
+{space 8}edad {c |}{col 14}{res}{space 2} .9823064{col 26}{space 2} .0061859{col 37}{space 1}   -2.83{col 46}{space 3}0.005{col 54}{space 4} .9702568{col 67}{space 3} .9945057
+{txt}{space 8}sexo {c |}{col 14}{res}{space 2}  1.29278{col 26}{space 2} .1810393{col 37}{space 1}    1.83{col 46}{space 3}0.067{col 54}{space 4} .9824789{col 67}{space 3} 1.701084
+{txt}tamaño_hogar {c |}{col 14}{res}{space 2} 1.028286{col 26}{space 2} .0265749{col 37}{space 1}    1.08{col 46}{space 3}0.280{col 54}{space 4} .9774977{col 67}{space 3} 1.081714
+{txt}estado_civil {c |}{col 14}{res}{space 2} .9329909{col 26}{space 2} .1313245{col 37}{space 1}   -0.49{col 46}{space 3}0.622{col 54}{space 4} .7080522{col 67}{space 3}  1.22939
+{txt}{space 7}etnia {c |}{col 14}{res}{space 2} .8544037{col 26}{space 2} .1162218{col 37}{space 1}   -1.16{col 46}{space 3}0.247{col 54}{space 4} .6544507{col 67}{space 3} 1.115448
+{txt}{space 3}ocupacion {c |}{col 14}{res}{space 2} 1.416762{col 26}{space 2} .2072237{col 37}{space 1}    2.38{col 46}{space 3}0.017{col 54}{space 4} 1.063641{col 67}{space 3} 1.887115
+{txt}{space 3}educacion {c |}{col 14}{res}{space 2} 1.015195{col 26}{space 2} .0175714{col 37}{space 1}    0.87{col 46}{space 3}0.384{col 54}{space 4} .9813337{col 67}{space 3} 1.050225
+{txt}{space 3}riqueza_2 {c |}{col 14}{res}{space 2} .7952944{col 26}{space 2}   .16044{col 37}{space 1}   -1.14{col 46}{space 3}0.256{col 54}{space 4} .5355615{col 67}{space 3} 1.180991
+{txt}{space 3}riqueza_3 {c |}{col 14}{res}{space 2} .9251838{col 26}{space 2} .2159246{col 37}{space 1}   -0.33{col 46}{space 3}0.739{col 54}{space 4} .5855578{col 67}{space 3} 1.461794
+{txt}{space 3}riqueza_4 {c |}{col 14}{res}{space 2} 1.269927{col 26}{space 2} .3533359{col 37}{space 1}    0.86{col 46}{space 3}0.390{col 54}{space 4} .7361155{col 67}{space 3} 2.190843
+{txt}{space 3}riqueza_5 {c |}{col 14}{res}{space 2} .8412483{col 26}{space 2} .3012489{col 37}{space 1}   -0.48{col 46}{space 3}0.629{col 54}{space 4}  .416976{col 67}{space 3} 1.697217
+{txt}{space 4}eps_cont {c |}{col 14}{res}{space 2} .9914754{col 26}{space 2} .2303404{col 37}{space 1}   -0.04{col 46}{space 3}0.971{col 54}{space 4} .6288253{col 67}{space 3} 1.563269
+{txt}{space 5}eps_sub {c |}{col 14}{res}{space 2} .8053115{col 26}{space 2} .1441662{col 37}{space 1}   -1.21{col 46}{space 3}0.226{col 54}{space 4} .5669992{col 67}{space 3} 1.143788
+{txt}{space 5}eps_esp {c |}{col 14}{res}{space 2} 4.309195{col 26}{space 2} 1.972438{col 37}{space 1}    3.19{col 46}{space 3}0.001{col 54}{space 4} 1.757024{col 67}{space 3} 10.56853
+{txt}{space 4}obesidad {c |}{col 14}{res}{space 2} .9314528{col 26}{space 2}  .165463{col 37}{space 1}   -0.40{col 46}{space 3}0.689{col 54}{space 4} .6575877{col 67}{space 3} 1.319375
+{txt}{space 4}bajopeso {c |}{col 14}{res}{space 2} 1.144458{col 26}{space 2} .3606863{col 37}{space 1}    0.43{col 46}{space 3}0.669{col 54}{space 4} .6170722{col 67}{space 3} 2.122578
+{txt}{space 6}urbano {c |}{col 14}{res}{space 2}  1.32019{col 26}{space 2} .2477517{col 37}{space 1}    1.48{col 46}{space 3}0.139{col 54}{space 4} .9138961{col 67}{space 3} 1.907111
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .4269156{col 26}{space 2} .1467278{col 37}{space 1}   -2.48{col 46}{space 3}0.013{col 54}{space 4} .2176658{col 67}{space 3} .8373247
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}bueno       {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}malo         {txt}{c |}
+{space 8}edad {c |}{col 14}{res}{space 2} 1.035415{col 26}{space 2} .0053697{col 37}{space 1}    6.71{col 46}{space 3}0.000{col 54}{space 4} 1.024944{col 67}{space 3} 1.045993
+{txt}{space 8}sexo {c |}{col 14}{res}{space 2} .5079259{col 26}{space 2} .0687847{col 37}{space 1}   -5.00{col 46}{space 3}0.000{col 54}{space 4} .3895187{col 67}{space 3} .6623269
+{txt}tamaño_hogar {c |}{col 14}{res}{space 2} .9962045{col 26}{space 2} .0225915{col 37}{space 1}   -0.17{col 46}{space 3}0.867{col 54}{space 4} .9528955{col 67}{space 3} 1.041482
+{txt}estado_civil {c |}{col 14}{res}{space 2} 1.084251{col 26}{space 2} .1333382{col 37}{space 1}    0.66{col 46}{space 3}0.511{col 54}{space 4} .8520233{col 67}{space 3} 1.379775
+{txt}{space 7}etnia {c |}{col 14}{res}{space 2}  .962836{col 26}{space 2} .1223952{col 37}{space 1}   -0.30{col 46}{space 3}0.766{col 54}{space 4} .7504954{col 67}{space 3} 1.235255
+{txt}{space 3}ocupacion {c |}{col 14}{res}{space 2} 1.087827{col 26}{space 2} .1430737{col 37}{space 1}    0.64{col 46}{space 3}0.522{col 54}{space 4} .8406357{col 67}{space 3} 1.407706
+{txt}{space 3}educacion {c |}{col 14}{res}{space 2} .9594173{col 26}{space 2} .0149018{col 37}{space 1}   -2.67{col 46}{space 3}0.008{col 54}{space 4} .9306504{col 67}{space 3} .9890733
+{txt}{space 3}riqueza_2 {c |}{col 14}{res}{space 2} 1.314145{col 26}{space 2} .2375015{col 37}{space 1}    1.51{col 46}{space 3}0.131{col 54}{space 4} .9221643{col 67}{space 3} 1.872744
+{txt}{space 3}riqueza_3 {c |}{col 14}{res}{space 2} 1.401596{col 26}{space 2} .3050142{col 37}{space 1}    1.55{col 46}{space 3}0.121{col 54}{space 4} .9149238{col 67}{space 3} 2.147141
+{txt}{space 3}riqueza_4 {c |}{col 14}{res}{space 2} 1.422696{col 26}{space 2} .3852032{col 37}{space 1}    1.30{col 46}{space 3}0.193{col 54}{space 4} .8368439{col 67}{space 3} 2.418688
+{txt}{space 3}riqueza_5 {c |}{col 14}{res}{space 2} .7427737{col 26}{space 2} .2944842{col 37}{space 1}   -0.75{col 46}{space 3}0.453{col 54}{space 4}  .341495{col 67}{space 3} 1.615581
+{txt}{space 4}eps_cont {c |}{col 14}{res}{space 2} .6639865{col 26}{space 2} .1425181{col 37}{space 1}   -1.91{col 46}{space 3}0.056{col 54}{space 4} .4359707{col 67}{space 3} 1.011256
+{txt}{space 5}eps_sub {c |}{col 14}{res}{space 2} .8272213{col 26}{space 2} .1338087{col 37}{space 1}   -1.17{col 46}{space 3}0.241{col 54}{space 4} .6024681{col 67}{space 3}  1.13582
+{txt}{space 5}eps_esp {c |}{col 14}{res}{space 2} .5300763{col 26}{space 2} .3209345{col 37}{space 1}   -1.05{col 46}{space 3}0.294{col 54}{space 4} .1618001{col 67}{space 3} 1.736593
+{txt}{space 4}obesidad {c |}{col 14}{res}{space 2} 1.135652{col 26}{space 2} .1663607{col 37}{space 1}    0.87{col 46}{space 3}0.385{col 54}{space 4} .8522239{col 67}{space 3} 1.513342
+{txt}{space 4}bajopeso {c |}{col 14}{res}{space 2} 1.351427{col 26}{space 2}  .403879{col 37}{space 1}    1.01{col 46}{space 3}0.314{col 54}{space 4} .7523292{col 67}{space 3} 2.427601
+{txt}{space 6}urbano {c |}{col 14}{res}{space 2} 1.021102{col 26}{space 2} .1664585{col 37}{space 1}    0.13{col 46}{space 3}0.898{col 54}{space 4} .7418352{col 67}{space 3} 1.405499
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .2641218{col 26}{space 2} .0866126{col 37}{space 1}   -4.06{col 46}{space 3}0.000{col 54}{space 4} .1388905{col 67}{space 3} .5022685
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(output written to {browse  `"E:/Dropbox\Trabajo de Grado\Procesamiento de informacion/Tablas/reg_deptos.csv"'})
+{res}
+{txt}Multinomial logistic regression{col 51}Number of obs{col 67}= {res}      2433
+{txt}{col 51}Wald chi2({res}34{txt}){col 67}= {res}    245.23
+{txt}{col 51}Prob > chi2{col 67}= {res}    0.0000
+{txt}Log pseudolikelihood = {res}-2113.7669{txt}{col 51}Pseudo R2{col 67}= {res}    0.0608
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}       salud{col 14}{c |}        RRR{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}Muy_bueno    {txt}{c |}
+{space 8}edad {c |}{col 14}{res}{space 2} .9878474{col 26}{space 2} .0057618{col 37}{space 1}   -2.10{col 46}{space 3}0.036{col 54}{space 4} .9766187{col 67}{space 3} .9992052
+{txt}{space 8}sexo {c |}{col 14}{res}{space 2} 1.185737{col 26}{space 2} .1747074{col 37}{space 1}    1.16{col 46}{space 3}0.248{col 54}{space 4} .8883243{col 67}{space 3} 1.582723
+{txt}tamaño_hogar {c |}{col 14}{res}{space 2} .9909017{col 26}{space 2} .0255827{col 37}{space 1}   -0.35{col 46}{space 3}0.723{col 54}{space 4} .9420079{col 67}{space 3} 1.042333
+{txt}estado_civil {c |}{col 14}{res}{space 2} .7738372{col 26}{space 2} .1085786{col 37}{space 1}   -1.83{col 46}{space 3}0.068{col 54}{space 4} .5877815{col 67}{space 3} 1.018787
+{txt}{space 7}etnia {c |}{col 14}{res}{space 2} .9384263{col 26}{space 2} .1516508{col 37}{space 1}   -0.39{col 46}{space 3}0.694{col 54}{space 4} .6836675{col 67}{space 3} 1.288117
+{txt}{space 3}ocupacion {c |}{col 14}{res}{space 2} 1.140292{col 26}{space 2} .1690623{col 37}{space 1}    0.89{col 46}{space 3}0.376{col 54}{space 4} .8527366{col 67}{space 3} 1.524815
+{txt}{space 3}educacion {c |}{col 14}{res}{space 2} 1.017569{col 26}{space 2} .0190043{col 37}{space 1}    0.93{col 46}{space 3}0.351{col 54}{space 4} .9809946{col 67}{space 3} 1.055507
+{txt}{space 3}riqueza_2 {c |}{col 14}{res}{space 2} 1.606796{col 26}{space 2} .3363558{col 37}{space 1}    2.27{col 46}{space 3}0.023{col 54}{space 4} 1.066046{col 67}{space 3}  2.42184
+{txt}{space 3}riqueza_3 {c |}{col 14}{res}{space 2} 1.490613{col 26}{space 2} .3762651{col 37}{space 1}    1.58{col 46}{space 3}0.114{col 54}{space 4} .9088701{col 67}{space 3} 2.444712
+{txt}{space 3}riqueza_4 {c |}{col 14}{res}{space 2} 1.598337{col 26}{space 2}   .46781{col 37}{space 1}    1.60{col 46}{space 3}0.109{col 54}{space 4} .9006048{col 67}{space 3}  2.83663
+{txt}{space 3}riqueza_5 {c |}{col 14}{res}{space 2} 3.359207{col 26}{space 2}  1.06839{col 37}{space 1}    3.81{col 46}{space 3}0.000{col 54}{space 4} 1.800999{col 67}{space 3} 6.265562
+{txt}{space 4}eps_cont {c |}{col 14}{res}{space 2} 1.230121{col 26}{space 2}  .242236{col 37}{space 1}    1.05{col 46}{space 3}0.293{col 54}{space 4} .8362364{col 67}{space 3} 1.809535
+{txt}{space 5}eps_sub {c |}{col 14}{res}{space 2}  .972984{col 26}{space 2} .1641614{col 37}{space 1}   -0.16{col 46}{space 3}0.871{col 54}{space 4} .6990228{col 67}{space 3} 1.354316
+{txt}{space 5}eps_esp {c |}{col 14}{res}{space 2} 1.073118{col 26}{space 2} .5931654{col 37}{space 1}    0.13{col 46}{space 3}0.898{col 54}{space 4} .3632006{col 67}{space 3} 3.170653
+{txt}{space 4}obesidad {c |}{col 14}{res}{space 2} 1.072322{col 26}{space 2} .1940747{col 37}{space 1}    0.39{col 46}{space 3}0.700{col 54}{space 4} .7520908{col 67}{space 3} 1.528905
+{txt}{space 4}bajopeso {c |}{col 14}{res}{space 2}  .998245{col 26}{space 2} .3236719{col 37}{space 1}   -0.01{col 46}{space 3}0.996{col 54}{space 4} .5287407{col 67}{space 3} 1.884654
+{txt}{space 6}urbano {c |}{col 14}{res}{space 2} 1.097083{col 26}{space 2}  .230253{col 37}{space 1}    0.44{col 46}{space 3}0.659{col 54}{space 4} .7270958{col 67}{space 3} 1.655342
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .2354375{col 26}{space 2} .0920673{col 37}{space 1}   -3.70{col 46}{space 3}0.000{col 54}{space 4} .1093995{col 67}{space 3} .5066828
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}bueno       {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}malo         {txt}{c |}
+{space 8}edad {c |}{col 14}{res}{space 2} 1.032008{col 26}{space 2} .0044972{col 37}{space 1}    7.23{col 46}{space 3}0.000{col 54}{space 4} 1.023231{col 67}{space 3}  1.04086
+{txt}{space 8}sexo {c |}{col 14}{res}{space 2} .5059905{col 26}{space 2} .0576667{col 37}{space 1}   -5.98{col 46}{space 3}0.000{col 54}{space 4} .4046996{col 67}{space 3} .6326333
+{txt}tamaño_hogar {c |}{col 14}{res}{space 2} 1.014875{col 26}{space 2} .0193145{col 37}{space 1}    0.78{col 46}{space 3}0.438{col 54}{space 4} .9777162{col 67}{space 3} 1.053445
+{txt}estado_civil {c |}{col 14}{res}{space 2} .8696021{col 26}{space 2} .0909387{col 37}{space 1}   -1.34{col 46}{space 3}0.182{col 54}{space 4} .7084449{col 67}{space 3} 1.067419
+{txt}{space 7}etnia {c |}{col 14}{res}{space 2} .8857577{col 26}{space 2} .1026053{col 37}{space 1}   -1.05{col 46}{space 3}0.295{col 54}{space 4} .7058502{col 67}{space 3}  1.11152
+{txt}{space 3}ocupacion {c |}{col 14}{res}{space 2} 1.117437{col 26}{space 2} .1242405{col 37}{space 1}    1.00{col 46}{space 3}0.318{col 54}{space 4} .8986359{col 67}{space 3} 1.389513
+{txt}{space 3}educacion {c |}{col 14}{res}{space 2} .9762033{col 26}{space 2} .0138969{col 37}{space 1}   -1.69{col 46}{space 3}0.091{col 54}{space 4} .9493423{col 67}{space 3} 1.003824
+{txt}{space 3}riqueza_2 {c |}{col 14}{res}{space 2} .6950766{col 26}{space 2} .0946972{col 37}{space 1}   -2.67{col 46}{space 3}0.008{col 54}{space 4} .5321879{col 67}{space 3} .9078211
+{txt}{space 3}riqueza_3 {c |}{col 14}{res}{space 2} .9612404{col 26}{space 2} .1623582{col 37}{space 1}   -0.23{col 46}{space 3}0.815{col 54}{space 4}  .690335{col 67}{space 3} 1.338456
+{txt}{space 3}riqueza_4 {c |}{col 14}{res}{space 2} .8348109{col 26}{space 2} .1751671{col 37}{space 1}   -0.86{col 46}{space 3}0.390{col 54}{space 4} .5533268{col 67}{space 3} 1.259489
+{txt}{space 3}riqueza_5 {c |}{col 14}{res}{space 2} .4532298{col 26}{space 2}  .142786{col 37}{space 1}   -2.51{col 46}{space 3}0.012{col 54}{space 4} .2444302{col 67}{space 3}  .840392
+{txt}{space 4}eps_cont {c |}{col 14}{res}{space 2} .7161127{col 26}{space 2} .1132681{col 37}{space 1}   -2.11{col 46}{space 3}0.035{col 54}{space 4} .5252258{col 67}{space 3} .9763749
+{txt}{space 5}eps_sub {c |}{col 14}{res}{space 2} 1.034731{col 26}{space 2} .1269921{col 37}{space 1}    0.28{col 46}{space 3}0.781{col 54}{space 4} .8135047{col 67}{space 3} 1.316119
+{txt}{space 5}eps_esp {c |}{col 14}{res}{space 2} 1.380663{col 26}{space 2} .5650067{col 37}{space 1}    0.79{col 46}{space 3}0.431{col 54}{space 4} .6190875{col 67}{space 3} 3.079099
+{txt}{space 4}obesidad {c |}{col 14}{res}{space 2} 1.192114{col 26}{space 2} .1596865{col 37}{space 1}    1.31{col 46}{space 3}0.190{col 54}{space 4} .9168484{col 67}{space 3} 1.550024
+{txt}{space 4}bajopeso {c |}{col 14}{res}{space 2} .9496562{col 26}{space 2}  .208823{col 37}{space 1}   -0.23{col 46}{space 3}0.814{col 54}{space 4} .6171532{col 67}{space 3} 1.461302
+{txt}{space 6}urbano {c |}{col 14}{res}{space 2} .9918974{col 26}{space 2} .1295897{col 37}{space 1}   -0.06{col 46}{space 3}0.950{col 54}{space 4} .7678187{col 67}{space 3} 1.281371
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .3642991{col 26}{space 2} .1047762{col 37}{space 1}   -3.51{col 46}{space 3}0.000{col 54}{space 4} .2073212{col 67}{space 3} .6401365
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(output written to {browse  `"E:/Dropbox\Trabajo de Grado\Procesamiento de informacion/Tablas/reg_deptos.csv"'})
+{res}
+{txt}Multinomial logistic regression{col 51}Number of obs{col 67}= {res}      2825
+{txt}{col 51}Wald chi2({res}34{txt}){col 67}= {res}    317.31
+{txt}{col 51}Prob > chi2{col 67}= {res}    0.0000
+{txt}Log pseudolikelihood = {res}-1448.7332{txt}{col 51}Pseudo R2{col 67}= {res}    0.0719
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}       salud{col 14}{c |}        RRR{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}Muy_bueno    {txt}{c |}
+{space 8}edad {c |}{col 14}{res}{space 2} .9859303{col 26}{space 2} .0066766{col 37}{space 1}   -2.09{col 46}{space 3}0.036{col 54}{space 4} .9729308{col 67}{space 3} .9991035
+{txt}{space 8}sexo {c |}{col 14}{res}{space 2} 1.683721{col 26}{space 2} .2690205{col 37}{space 1}    3.26{col 46}{space 3}0.001{col 54}{space 4} 1.231027{col 67}{space 3} 2.302888
+{txt}tamaño_hogar {c |}{col 14}{res}{space 2} .9374848{col 26}{space 2} .0313813{col 37}{space 1}   -1.93{col 46}{space 3}0.054{col 54}{space 4} .8779529{col 67}{space 3} 1.001053
+{txt}estado_civil {c |}{col 14}{res}{space 2} .9036233{col 26}{space 2} .1383199{col 37}{space 1}   -0.66{col 46}{space 3}0.508{col 54}{space 4} .6694094{col 67}{space 3} 1.219784
+{txt}{space 7}etnia {c |}{col 14}{res}{space 2} 1.041609{col 26}{space 2} .1743791{col 37}{space 1}    0.24{col 46}{space 3}0.808{col 54}{space 4}  .750244{col 67}{space 3} 1.446129
+{txt}{space 3}ocupacion {c |}{col 14}{res}{space 2} .9928001{col 26}{space 2} .1609078{col 37}{space 1}   -0.04{col 46}{space 3}0.964{col 54}{space 4} .7226093{col 67}{space 3} 1.364018
+{txt}{space 3}educacion {c |}{col 14}{res}{space 2} .9969673{col 26}{space 2}   .02068{col 37}{space 1}   -0.15{col 46}{space 3}0.884{col 54}{space 4} .9572481{col 67}{space 3} 1.038335
+{txt}{space 3}riqueza_2 {c |}{col 14}{res}{space 2} 1.148511{col 26}{space 2} .2815972{col 37}{space 1}    0.56{col 46}{space 3}0.572{col 54}{space 4} .7102866{col 67}{space 3} 1.857106
+{txt}{space 3}riqueza_3 {c |}{col 14}{res}{space 2} 1.524365{col 26}{space 2} .4462432{col 37}{space 1}    1.44{col 46}{space 3}0.150{col 54}{space 4} .8588316{col 67}{space 3}  2.70564
+{txt}{space 3}riqueza_4 {c |}{col 14}{res}{space 2} 2.268932{col 26}{space 2} .6839373{col 37}{space 1}    2.72{col 46}{space 3}0.007{col 54}{space 4} 1.256721{col 67}{space 3} 4.096416
+{txt}{space 3}riqueza_5 {c |}{col 14}{res}{space 2} 2.100777{col 26}{space 2} .7174197{col 37}{space 1}    2.17{col 46}{space 3}0.030{col 54}{space 4} 1.075705{col 67}{space 3} 4.102675
+{txt}{space 4}eps_cont {c |}{col 14}{res}{space 2} .8224981{col 26}{space 2} .1895929{col 37}{space 1}   -0.85{col 46}{space 3}0.397{col 54}{space 4} .5235108{col 67}{space 3} 1.292243
+{txt}{space 5}eps_sub {c |}{col 14}{res}{space 2} .4517258{col 26}{space 2} .0810895{col 37}{space 1}   -4.43{col 46}{space 3}0.000{col 54}{space 4} .3177425{col 67}{space 3} .6422062
+{txt}{space 5}eps_esp {c |}{col 14}{res}{space 2} .4914519{col 26}{space 2} .1875528{col 37}{space 1}   -1.86{col 46}{space 3}0.063{col 54}{space 4} .2326147{col 67}{space 3} 1.038305
+{txt}{space 4}obesidad {c |}{col 14}{res}{space 2} .8841842{col 26}{space 2} .1907521{col 37}{space 1}   -0.57{col 46}{space 3}0.568{col 54}{space 4} .5793036{col 67}{space 3}  1.34952
+{txt}{space 4}bajopeso {c |}{col 14}{res}{space 2} .7844667{col 26}{space 2} .2882554{col 37}{space 1}   -0.66{col 46}{space 3}0.509{col 54}{space 4} .3817659{col 67}{space 3} 1.611951
+{txt}{space 6}urbano {c |}{col 14}{res}{space 2} .6040312{col 26}{space 2} .1373034{col 37}{space 1}   -2.22{col 46}{space 3}0.027{col 54}{space 4} .3868755{col 67}{space 3} .9430776
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .5701674{col 26}{space 2} .2291997{col 37}{space 1}   -1.40{col 46}{space 3}0.162{col 54}{space 4} .2593168{col 67}{space 3} 1.253644
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}bueno       {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}malo         {txt}{c |}
+{space 8}edad {c |}{col 14}{res}{space 2} 1.034612{col 26}{space 2} .0042577{col 37}{space 1}    8.27{col 46}{space 3}0.000{col 54}{space 4}   1.0263{col 67}{space 3}  1.04299
+{txt}{space 8}sexo {c |}{col 14}{res}{space 2} .6903921{col 26}{space 2}    .0754{col 37}{space 1}   -3.39{col 46}{space 3}0.001{col 54}{space 4} .5573568{col 67}{space 3} .8551817
+{txt}tamaño_hogar {c |}{col 14}{res}{space 2} .9624663{col 26}{space 2} .0167302{col 37}{space 1}   -2.20{col 46}{space 3}0.028{col 54}{space 4} .9302279{col 67}{space 3} .9958219
+{txt}estado_civil {c |}{col 14}{res}{space 2} 1.210252{col 26}{space 2} .1168894{col 37}{space 1}    1.98{col 46}{space 3}0.048{col 54}{space 4} 1.001531{col 67}{space 3}  1.46247
+{txt}{space 7}etnia {c |}{col 14}{res}{space 2} .8703542{col 26}{space 2} .0915848{col 37}{space 1}   -1.32{col 46}{space 3}0.187{col 54}{space 4} .7081522{col 67}{space 3} 1.069709
+{txt}{space 3}ocupacion {c |}{col 14}{res}{space 2} 1.092414{col 26}{space 2} .1177878{col 37}{space 1}    0.82{col 46}{space 3}0.412{col 54}{space 4} .8843167{col 67}{space 3} 1.349481
+{txt}{space 3}educacion {c |}{col 14}{res}{space 2} .9736448{col 26}{space 2} .0127829{col 37}{space 1}   -2.03{col 46}{space 3}0.042{col 54}{space 4} .9489104{col 67}{space 3} .9990239
+{txt}{space 3}riqueza_2 {c |}{col 14}{res}{space 2} .8359828{col 26}{space 2} .1154174{col 37}{space 1}   -1.30{col 46}{space 3}0.194{col 54}{space 4} .6377916{col 67}{space 3} 1.095761
+{txt}{space 3}riqueza_3 {c |}{col 14}{res}{space 2} .6444183{col 26}{space 2} .1082937{col 37}{space 1}   -2.61{col 46}{space 3}0.009{col 54}{space 4} .4635798{col 67}{space 3} .8958005
+{txt}{space 3}riqueza_4 {c |}{col 14}{res}{space 2} .4336438{col 26}{space 2} .0915367{col 37}{space 1}   -3.96{col 46}{space 3}0.000{col 54}{space 4} .2867182{col 67}{space 3} .6558598
+{txt}{space 3}riqueza_5 {c |}{col 14}{res}{space 2} .4168215{col 26}{space 2} .1044725{col 37}{space 1}   -3.49{col 46}{space 3}0.000{col 54}{space 4} .2550376{col 67}{space 3} .6812335
+{txt}{space 4}eps_cont {c |}{col 14}{res}{space 2} .6435018{col 26}{space 2} .1125353{col 37}{space 1}   -2.52{col 46}{space 3}0.012{col 54}{space 4} .4567642{col 67}{space 3} .9065829
+{txt}{space 5}eps_sub {c |}{col 14}{res}{space 2} .7571722{col 26}{space 2} .0902674{col 37}{space 1}   -2.33{col 46}{space 3}0.020{col 54}{space 4} .5994009{col 67}{space 3} .9564712
+{txt}{space 5}eps_esp {c |}{col 14}{res}{space 2} .4814465{col 26}{space 2} .1501712{col 37}{space 1}   -2.34{col 46}{space 3}0.019{col 54}{space 4} .2612427{col 67}{space 3} .8872621
+{txt}{space 4}obesidad {c |}{col 14}{res}{space 2} .9752813{col 26}{space 2} .1240677{col 37}{space 1}   -0.20{col 46}{space 3}0.844{col 54}{space 4} .7600579{col 67}{space 3} 1.251449
+{txt}{space 4}bajopeso {c |}{col 14}{res}{space 2}  1.20206{col 26}{space 2} .2381234{col 37}{space 1}    0.93{col 46}{space 3}0.353{col 54}{space 4} .8152795{col 67}{space 3} 1.772335
+{txt}{space 6}urbano {c |}{col 14}{res}{space 2}  .952022{col 26}{space 2} .1245406{col 37}{space 1}   -0.38{col 46}{space 3}0.707{col 54}{space 4}  .736708{col 67}{space 3} 1.230265
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .4372097{col 26}{space 2} .1124815{col 37}{space 1}   -3.22{col 46}{space 3}0.001{col 54}{space 4} .2640584{col 67}{space 3} .7239017
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(output written to {browse  `"E:/Dropbox\Trabajo de Grado\Procesamiento de informacion/Tablas/reg_deptos.csv"'})
+{res}
+{txt}Multinomial logistic regression{col 51}Number of obs{col 67}= {res}      2400
+{txt}{col 51}Wald chi2({res}34{txt}){col 67}= {res}    220.36
+{txt}{col 51}Prob > chi2{col 67}= {res}    0.0000
+{txt}Log pseudolikelihood = {res}-118.61584{txt}{col 51}Pseudo R2{col 67}= {res}    0.0606
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}       salud{col 14}{c |}        RRR{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}Muy_bueno    {txt}{c |}
+{space 8}edad {c |}{col 14}{res}{space 2} .9894942{col 26}{space 2}  .005803{col 37}{space 1}   -1.80{col 46}{space 3}0.072{col 54}{space 4} .9781856{col 67}{space 3} 1.000934
+{txt}{space 8}sexo {c |}{col 14}{res}{space 2} 1.469693{col 26}{space 2} .1861142{col 37}{space 1}    3.04{col 46}{space 3}0.002{col 54}{space 4} 1.146661{col 67}{space 3} 1.883729
+{txt}tamaño_hogar {c |}{col 14}{res}{space 2} .9094171{col 26}{space 2} .0299791{col 37}{space 1}   -2.88{col 46}{space 3}0.004{col 54}{space 4} .8525171{col 67}{space 3} .9701147
+{txt}estado_civil {c |}{col 14}{res}{space 2} .9244957{col 26}{space 2} .1240091{col 37}{space 1}   -0.59{col 46}{space 3}0.558{col 54}{space 4} .7107669{col 67}{space 3} 1.202493
+{txt}{space 7}etnia {c |}{col 14}{res}{space 2} 1.436894{col 26}{space 2} .1886501{col 37}{space 1}    2.76{col 46}{space 3}0.006{col 54}{space 4} 1.110888{col 67}{space 3} 1.858571
+{txt}{space 3}ocupacion {c |}{col 14}{res}{space 2} 1.146511{col 26}{space 2} .1843139{col 37}{space 1}    0.85{col 46}{space 3}0.395{col 54}{space 4}   .83664{col 67}{space 3} 1.571151
+{txt}{space 3}educacion {c |}{col 14}{res}{space 2} 1.035111{col 26}{space 2} .0214705{col 37}{space 1}    1.66{col 46}{space 3}0.096{col 54}{space 4} .9938737{col 67}{space 3}  1.07806
+{txt}{space 3}riqueza_2 {c |}{col 14}{res}{space 2} 1.192497{col 26}{space 2} .1989391{col 37}{space 1}    1.06{col 46}{space 3}0.291{col 54}{space 4} .8599144{col 67}{space 3} 1.653711
+{txt}{space 3}riqueza_3 {c |}{col 14}{res}{space 2} 1.479469{col 26}{space 2} .3881691{col 37}{space 1}    1.49{col 46}{space 3}0.135{col 54}{space 4} .8846582{col 67}{space 3} 2.474207
+{txt}{space 3}riqueza_4 {c |}{col 14}{res}{space 2} 1.502374{col 26}{space 2} .5145424{col 37}{space 1}    1.19{col 46}{space 3}0.235{col 54}{space 4} .7678094{col 67}{space 3} 2.939699
+{txt}{space 3}riqueza_5 {c |}{col 14}{res}{space 2} 3.467513{col 26}{space 2}  3.33774{col 37}{space 1}    1.29{col 46}{space 3}0.196{col 54}{space 4} .5256214{col 67}{space 3}  22.8751
+{txt}{space 4}eps_cont {c |}{col 14}{res}{space 2} 1.600137{col 26}{space 2} .4225754{col 37}{space 1}    1.78{col 46}{space 3}0.075{col 54}{space 4} .9535996{col 67}{space 3} 2.685026
+{txt}{space 5}eps_sub {c |}{col 14}{res}{space 2}  1.35741{col 26}{space 2} .3688735{col 37}{space 1}    1.12{col 46}{space 3}0.261{col 54}{space 4}  .796891{col 67}{space 3}  2.31219
+{txt}{space 5}eps_esp {c |}{col 14}{res}{space 2} 1.135128{col 26}{space 2} .6275208{col 37}{space 1}    0.23{col 46}{space 3}0.819{col 54}{space 4} .3841354{col 67}{space 3} 3.354328
+{txt}{space 4}obesidad {c |}{col 14}{res}{space 2} 1.004087{col 26}{space 2} .1440081{col 37}{space 1}    0.03{col 46}{space 3}0.977{col 54}{space 4} .7580366{col 67}{space 3} 1.330002
+{txt}{space 4}bajopeso {c |}{col 14}{res}{space 2} 1.157126{col 26}{space 2} .4197773{col 37}{space 1}    0.40{col 46}{space 3}0.687{col 54}{space 4} .5683101{col 67}{space 3} 2.356004
+{txt}{space 6}urbano {c |}{col 14}{res}{space 2} 1.277923{col 26}{space 2} .2013692{col 37}{space 1}    1.56{col 46}{space 3}0.120{col 54}{space 4} .9383745{col 67}{space 3} 1.740336
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .1002337{col 26}{space 2} .0460532{col 37}{space 1}   -5.01{col 46}{space 3}0.000{col 54}{space 4} .0407307{col 67}{space 3} .2466636
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}bueno       {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}malo         {txt}{c |}
+{space 8}edad {c |}{col 14}{res}{space 2} 1.044118{col 26}{space 2} .0054248{col 37}{space 1}    8.31{col 46}{space 3}0.000{col 54}{space 4}  1.03354{col 67}{space 3} 1.054805
+{txt}{space 8}sexo {c |}{col 14}{res}{space 2} .8155202{col 26}{space 2} .0978563{col 37}{space 1}   -1.70{col 46}{space 3}0.089{col 54}{space 4} .6446098{col 67}{space 3} 1.031745
+{txt}tamaño_hogar {c |}{col 14}{res}{space 2} .9566398{col 26}{space 2} .0254204{col 37}{space 1}   -1.67{col 46}{space 3}0.095{col 54}{space 4} .9080918{col 67}{space 3} 1.007783
+{txt}estado_civil {c |}{col 14}{res}{space 2} 1.282238{col 26}{space 2}  .149375{col 37}{space 1}    2.13{col 46}{space 3}0.033{col 54}{space 4} 1.020487{col 67}{space 3} 1.611127
+{txt}{space 7}etnia {c |}{col 14}{res}{space 2} 1.141112{col 26}{space 2} .1376372{col 37}{space 1}    1.09{col 46}{space 3}0.274{col 54}{space 4} .9008635{col 67}{space 3} 1.445431
+{txt}{space 3}ocupacion {c |}{col 14}{res}{space 2} .8061329{col 26}{space 2}  .105309{col 37}{space 1}   -1.65{col 46}{space 3}0.099{col 54}{space 4} .6240366{col 67}{space 3} 1.041366
+{txt}{space 3}educacion {c |}{col 14}{res}{space 2} .9522294{col 26}{space 2} .0161945{col 37}{space 1}   -2.88{col 46}{space 3}0.004{col 54}{space 4} .9210119{col 67}{space 3}  .984505
+{txt}{space 3}riqueza_2 {c |}{col 14}{res}{space 2} 1.111636{col 26}{space 2} .1538214{col 37}{space 1}    0.76{col 46}{space 3}0.444{col 54}{space 4} .8475759{col 67}{space 3} 1.457964
+{txt}{space 3}riqueza_3 {c |}{col 14}{res}{space 2} .8036573{col 26}{space 2} .2194195{col 37}{space 1}   -0.80{col 46}{space 3}0.423{col 54}{space 4} .4706202{col 67}{space 3}  1.37237
+{txt}{space 3}riqueza_4 {c |}{col 14}{res}{space 2} .9715782{col 26}{space 2} .4040272{col 37}{space 1}   -0.07{col 46}{space 3}0.945{col 54}{space 4} .4300399{col 67}{space 3} 2.195062
+{txt}{space 3}riqueza_5 {c |}{col 14}{res}{space 2} 1.663941{col 26}{space 2} 2.121516{col 37}{space 1}    0.40{col 46}{space 3}0.690{col 54}{space 4} .1367288{col 67}{space 3} 20.24956
+{txt}{space 4}eps_cont {c |}{col 14}{res}{space 2} .5143451{col 26}{space 2} .1009173{col 37}{space 1}   -3.39{col 46}{space 3}0.001{col 54}{space 4} .3501419{col 67}{space 3} .7555531
+{txt}{space 5}eps_sub {c |}{col 14}{res}{space 2} .6926913{col 26}{space 2} .1374185{col 37}{space 1}   -1.85{col 46}{space 3}0.064{col 54}{space 4}  .469543{col 67}{space 3}  1.02189
+{txt}{space 5}eps_esp {c |}{col 14}{res}{space 2}  1.15109{col 26}{space 2}  .462474{col 37}{space 1}    0.35{col 46}{space 3}0.726{col 54}{space 4}  .523747{col 67}{space 3} 2.529862
+{txt}{space 4}obesidad {c |}{col 14}{res}{space 2} 1.049707{col 26}{space 2} .1283498{col 37}{space 1}    0.40{col 46}{space 3}0.692{col 54}{space 4}  .826019{col 67}{space 3} 1.333971
+{txt}{space 4}bajopeso {c |}{col 14}{res}{space 2} 1.193549{col 26}{space 2} .4375963{col 37}{space 1}    0.48{col 46}{space 3}0.629{col 54}{space 4} .5817822{col 67}{space 3} 2.448613
+{txt}{space 6}urbano {c |}{col 14}{res}{space 2} .8103767{col 26}{space 2} .1058552{col 37}{space 1}   -1.61{col 46}{space 3}0.107{col 54}{space 4} .6273342{col 67}{space 3} 1.046827
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .1816083{col 26}{space 2} .0726273{col 37}{space 1}   -4.27{col 46}{space 3}0.000{col 54}{space 4} .0829336{col 67}{space 3} .3976867
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(output written to {browse  `"E:/Dropbox\Trabajo de Grado\Procesamiento de informacion/Tablas/reg_deptos.csv"'})
+
+{com}. *
+. 
+. stcmd "${c -(}T{c )-}reg_deptos.csv" "${c -(}T{c )-}deptos_regresion.xlsx" /y 
+{txt}
+{com}. erase "${c -(}T{c )-}reg_deptos.csv"
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\JUAN\AppData\Local\Temp\STD01000000.tmp"
+{txt}
+{com}. use "${c -(}B{c )-}regresion_colombia", clear
+{txt}
+{com}. 
+. global indep "edad sexo tamaño_hogar estado_civil etnia ocupacion educacion riqueza_2 riqueza_3 riqueza_4 riqueza_5 eps_cont eps_sub eps_esp obesidad bajopeso urbano"
+{txt}
+{com}. global indep2 "edad sexo tamaño_hogar etnia ocupacion educacion riqueza_2 riqueza_3 riqueza_4 riqueza_5 eps_cont eps_sub eps_esp obesidad bajopeso"
+{txt}
+{com}. 
+. 
+. ***Modelo Colombia
+. set more off
+{txt}
+{com}. quietly: eststo modelocol: svy: mlogit salud ${c -(}indep{c )-}, nolog rrr
+{txt}
+{com}. 
+. * Exportando resultados
+. esttab modelocol using "${c -(}T{c )-}col_regresion.csv",  replace cells(`"b(fmt(3) label("Coef.")  ) p(fmt(3) label("p-valor")) & _star "')  starlevels(** 0.05) drop("o.*" ) unstack  plain ///
+> mlabels("ModeloNacional", span) eqlabels("Muy Bueno" "Malo") eform
+{res}{txt}(note: file E:/Dropbox\Trabajo de Grado\Procesamiento de informacion/Tablas/col_regresion.csv not found)
+(output written to {browse  `"E:/Dropbox\Trabajo de Grado\Procesamiento de informacion/Tablas/col_regresion.csv"'})
+
+{com}. 
+. stcmd "${c -(}T{c )-}col_regresion.csv" "${c -(}T{c )-}col_regresion.xlsx" /y 
+{txt}
+{com}. erase "${c -(}T{c )-}col_regresion.csv"
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\JUAN\AppData\Local\Temp\STD01000000.tmp"
+{txt}
+{com}. set more off
+{txt}
+{com}. quietly: eststo modelocol: svy: mlogit salud ${c -(}indep{c )-}, nolog rrr
+{txt}
+{com}. 
+. * Exportando resultados
+. esttab modelocol using "${c -(}T{c )-}col_regresion.csv",  replace cells(`"b(fmt(3) label("Coef.")  ) p(fmt(3) label("p-valor")) & _star ci(fmt(3)) "')  starlevels(** 0.05) drop("o.*" ) unstack  plain ///
+> mlabels("ModeloNacional", span) eqlabels("Muy Bueno" "Malo") eform
+{res}{txt}(note: file E:/Dropbox\Trabajo de Grado\Procesamiento de informacion/Tablas/col_regresion.csv not found)
+(output written to {browse  `"E:/Dropbox\Trabajo de Grado\Procesamiento de informacion/Tablas/col_regresion.csv"'})
+
+{com}. 
+. stcmd "${c -(}T{c )-}col_regresion.csv" "${c -(}T{c )-}col_regresion.xlsx" /y 
+{txt}
+{com}. erase "${c -(}T{c )-}col_regresion.csv"
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. exit, clear

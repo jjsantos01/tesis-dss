@@ -1,0 +1,33 @@
+StataFileTM:00001:01100:GREC:                          :
+00003:00003:00001:
+*! classname: combinegraph_g
+*! family: combine
+*! date: 29 Aug 2013
+*! time: 17:50:59
+*! graph_scheme: s2color
+*! naturallywhite: 1
+*! end
+
+// File created by Graph Editor Recorder.
+// Edit only if you know what you are doing.
+
+.AddLine added_lines editor 4.822459979057214 50.12865339232954 132.1328634703525 50.12865339232954
+.added_lines_new = 1
+.added_lines_rec = 1
+.added_lines[1].style.editstyle  linestyle( width(thin) color(black) pattern(solid)) headstyle( symbol(circle) linestyle( width(thin) color(black) pattern(solid)) fillcolor(black) size(medium) angle(stdarrow) backsymbol(none) backline( width(thin) color(black) pattern(solid)) backcolor(black) backsize(zero) backangle(stdarrow)) headpos(neither) editcopy
+// edits
+
+.plotregion1.graph2.AddLine added_lines editor -2.527465374096078 37.87323456307558 -2.527465374096078 -42.09219681135013
+.plotregion1.graph2.added_lines_new = 1
+.plotregion1.graph2.added_lines_rec = 1
+.plotregion1.graph2.added_lines[1].style.editstyle  linestyle( width(thin) color(black) pattern(solid)) headstyle( symbol(circle) linestyle( width(thin) color(black) pattern(solid)) fillcolor(black) size(medium) angle(stdarrow) backsymbol(none) backline( width(thin) color(black) pattern(solid)) backcolor(black) backsize(zero) backangle(stdarrow)) headpos(neither) editcopy
+// edits
+
+.plotregion1.graph1.AddLine added_lines editor 61.28630365883758 -2.222746607670461 61.28630365883758 -43.67791358081464
+.plotregion1.graph1.added_lines_new = 1
+.plotregion1.graph1.added_lines_rec = 1
+.plotregion1.graph1.added_lines[1].style.editstyle  linestyle( width(thin) color(black) pattern(solid)) headstyle( symbol(circle) linestyle( width(thin) color(black) pattern(solid)) fillcolor(black) size(medium) angle(stdarrow) backsymbol(none) backline( width(thin) color(black) pattern(solid)) backcolor(black) backsize(zero) backangle(stdarrow)) headpos(neither) editcopy
+// edits
+
+
+// <end>
